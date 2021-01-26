@@ -28,6 +28,7 @@
 		1BC829AB25BF834200488C88 /* LoginViewControllerConstraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BC829AA25BF834200488C88 /* LoginViewControllerConstraints.swift */; };
 		1BC829B325BF836D00488C88 /* LoginViewControllerCustomButtonDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BC829B225BF836D00488C88 /* LoginViewControllerCustomButtonDelegate.swift */; };
 		1BC829BA25BF8B8600488C88 /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BC829B925BF8B8600488C88 /* UIViewExtension.swift */; };
+		1BD1314925C0AC14002CA357 /* CustomViewForTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BD1314825C0AC14002CA357 /* CustomViewForTextField.swift */; };
 		2AE9C997EB552D7016F605EE /* Pods_superxmarket_superxmarketUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C5EAD36ADFCBE9565E65BC96 /* Pods_superxmarket_superxmarketUITests.framework */; };
 		C6A3BE86624FFC3E5AA81DA2 /* Pods_superxmarketTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D27741273341A6D32CCF32A /* Pods_superxmarketTests.framework */; };
 /* End PBXBuildFile section */
@@ -77,6 +78,7 @@
 		1BC829AA25BF834200488C88 /* LoginViewControllerConstraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewControllerConstraints.swift; sourceTree = "<group>"; };
 		1BC829B225BF836D00488C88 /* LoginViewControllerCustomButtonDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewControllerCustomButtonDelegate.swift; sourceTree = "<group>"; };
 		1BC829B925BF8B8600488C88 /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
+		1BD1314825C0AC14002CA357 /* CustomViewForTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomViewForTextField.swift; sourceTree = "<group>"; };
 		28C10FB0A270062068D54CD4 /* Pods-superxmarketTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-superxmarketTests.release.xcconfig"; path = "Target Support Files/Pods-superxmarketTests/Pods-superxmarketTests.release.xcconfig"; sourceTree = "<group>"; };
 		2D27741273341A6D32CCF32A /* Pods_superxmarketTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_superxmarketTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5056BA4EBEA64224D0D9DBC7 /* Pods-superxmarket.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-superxmarket.release.xcconfig"; path = "Target Support Files/Pods-superxmarket/Pods-superxmarket.release.xcconfig"; sourceTree = "<group>"; };
@@ -118,6 +120,7 @@
 		1B03EA8725BF03F000CB8399 /* Login */ = {
 			isa = PBXGroup;
 			children = (
+				1BD1314725C0AC02002CA357 /* CustomTextField */,
 				1B03EA9D25BF31EA00CB8399 /* CustomsButton */,
 				1BC829A925BF831500488C88 /* Extensions */,
 				1B03EA9C25BF31DA00CB8399 /* View */,
@@ -259,6 +262,14 @@
 				1B391E3E25C04D1E007AF561 /* UITextFieldExtension.swift */,
 			);
 			path = Extentions;
+			sourceTree = "<group>";
+		};
+		1BD1314725C0AC02002CA357 /* CustomTextField */ = {
+			isa = PBXGroup;
+			children = (
+				1BD1314825C0AC14002CA357 /* CustomViewForTextField.swift */,
+			);
+			path = CustomTextField;
 			sourceTree = "<group>";
 		};
 		34520AF63CD9C79EAD1FC4F8 /* Frameworks */ = {
@@ -537,6 +548,7 @@
 				1B391E3725C0480D007AF561 /* CustomSignInButtonConstraints.swift in Sources */,
 				1B20DF2325BF3FE9009104DC /* CustomButtonDelegate.swift in Sources */,
 				1B839AEB25BEFB5D006342F4 /* SceneDelegate.swift in Sources */,
+				1BD1314925C0AC14002CA357 /* CustomViewForTextField.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

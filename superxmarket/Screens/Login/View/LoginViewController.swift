@@ -12,6 +12,7 @@ class LoginViewController: UIViewController {
     // MARK: Components
     var superxLogo: UIImageView = UIImageView()
     var emailTextField: UITextField = UITextField()
+    //var emailTextField: CustomViewForTextField = CustomViewForTextField()
     var passwordTextField: UITextField = UITextField()
     var continueButton: CustomButton = CustomButton()
     var recoverPasswordButton: CustomButton = CustomButton()
@@ -56,7 +57,7 @@ class LoginViewController: UIViewController {
     
     // MARK: SetupDelegates
     private func setupDelegates() {
-        self.emailTextField.delegate = self
+        //self.emailTextField.delegate = self
         self.passwordTextField.delegate = self
         self.continueButton.delegate = self
         self.recoverPasswordButton.delegate = self
@@ -104,7 +105,8 @@ class LoginViewController: UIViewController {
         setupEmailTextFieldConstraints()
         self.emailTextField.backgroundColor = Colors.ligherPurple
         self.emailTextField.layer.cornerRadius = 10
-        self.emailTextField.setLeftPadding(amount: 10)
+        //self.emailTextField.setLeftPadding(amount: 100)
+        self.emailTextField.setRightPaddingWithIcon(amount: 10, iconSize: 30, iconSystemName: "person.fill", iconColor: Colors.mainPurple)
         self.emailTextField.setPlaceholderWithColor(placeholder: "Email", color: Colors.darkPurple)
         self.emailTextField.textColor = Colors.darkerPurple
         self.emailTextField.keyboardType = .emailAddress

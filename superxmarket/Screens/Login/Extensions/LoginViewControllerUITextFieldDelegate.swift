@@ -35,6 +35,7 @@ extension LoginViewController: UITextFieldDelegate {
     }
     
     private func checkIfEmailIsValid() -> Bool {
-        return EmailValidator.validate(email: emailTextField.text ?? "")
+        //return EmailValidator.validate(email: emailTextField.text ?? "")
+        return false
     }
 }
