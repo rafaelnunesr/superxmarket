@@ -69,7 +69,7 @@ class LoginViewController: UIViewController {
     // MARK: SetupView
     private func setupBackgroundView() {
         
-        let gradientBackground: [UIColor] = [Colors.darkPurple, Colors.mainPurple]
+        let gradientBackground: [UIColor] = [Colors.lighterPurple, Colors.lightPurple, Colors.mainPurple, Colors.mainPurple, Colors.mainPurple]
         let location: [NSNumber] = [0, 0.25]
         let starPoint: CGPoint = CGPoint(x: 0.1, y: 1)
         let endPoint: CGPoint = CGPoint(x: 0.1, y: 0.1)
@@ -103,32 +103,31 @@ class LoginViewController: UIViewController {
     // MARK: SetupEmailTextField
     private func setupEmailTextField() {
         setupEmailTextFieldConstraints()
-        self.emailTextField.backgroundColor = Colors.ligherPurple
+        self.emailTextField.backgroundColor = UIColor(white: 1, alpha: 0.15)
         self.emailTextField.layer.cornerRadius = 10
-        //self.emailTextField.setLeftPadding(amount: 100)
-        self.emailTextField.setRightPaddingWithIcon(amount: 10, iconSize: 30, iconSystemName: "person.fill", iconColor: Colors.mainPurple)
-        self.emailTextField.setPlaceholderWithColor(placeholder: "Email", color: Colors.darkPurple)
-        self.emailTextField.textColor = Colors.darkerPurple
+        self.emailTextField.setRightPaddingWithIcon(amount: 10, iconSize: 25, iconSystemName: "person", iconColor: .white)
+        self.emailTextField.setPlaceholderWithColor(placeholder: "Email", color: .white)
+        self.emailTextField.textColor = .white
         self.emailTextField.keyboardType = .emailAddress
     }
     
     // MARK: SetupPasswordTextField
     private func setupPasswordTextField() {
         setupPasswordTextFieldConstraints()
-        self.passwordTextField.backgroundColor = Colors.ligherPurple
         self.passwordTextField.layer.cornerRadius = 10
-        self.passwordTextField.setLeftPadding(amount: 10)
-        self.passwordTextField.setPlaceholderWithColor(placeholder: "Password", color: Colors.darkPurple)
-        self.passwordTextField.textColor = Colors.darkerPurple
+        self.passwordTextField.setRightPaddingWithIcon(amount: 10, iconSize: 25, iconSystemName: "lock", iconColor: .white)
+        self.passwordTextField.setPlaceholderWithColor(placeholder: "Password", color: .white)
+        self.passwordTextField.textColor = .white
         self.passwordTextField.isSecureTextEntry = true
+        self.passwordTextField.backgroundColor = UIColor(white: 1, alpha: 0.15)
     }
     
     // MARK: SetupContinueButton
     private func setupContinueButton() {
         self.continueButton.setup()
         setupContinueButtonConstraints()
-        self.continueButton.setTitle("CONTINUE", for: .normal)
-        self.continueButton.backgroundColor = Colors.mainGreen
+        self.continueButton.setTitle("Sign In", for: .normal)
+        self.continueButton.backgroundColor = Colors.darkerPurple.withAlphaComponent(0.65)
     }
     
     // MARK: SetupRecoverPasswordButton
@@ -137,7 +136,7 @@ class LoginViewController: UIViewController {
         setupRecoverPasswordButtonConstraints()
         self.recoverPasswordButton.setTitle("Forgot Password", for: .normal)
         self.recoverPasswordButton.contentHorizontalAlignment = UIControl.ContentHorizontalAlignment.left
-        self.recoverPasswordButton.setTitleColor(Colors.darkerPurple, for: .normal)
+        self.recoverPasswordButton.setTitleColor(.white, for: .normal)
 
     }
     
@@ -147,37 +146,37 @@ class LoginViewController: UIViewController {
         setupSignupButtonConstraints()
         self.signupButton.setTitle("Sign Up", for: .normal)
         self.signupButton.contentHorizontalAlignment = UIControl.ContentHorizontalAlignment.right
-        self.signupButton.setTitleColor(Colors.darkerPurple, for: .normal)
+        self.signupButton.setTitleColor(.white, for: .normal)
     
     }
     
     // MARK: SetupLineView
     private func setupLineView() {
         setupLineViewConstraints()
-        self.lineView.backgroundColor = Colors.darkPurple
+        self.lineView.backgroundColor = .white
     }
     
     // MARK: SetupGoogleButton
     private func setupGoogleButton() {
         setupGoogleButtonConstraints()
-        self.googleButton.setup(companyLogoName: "google-logo", width: 160, height: nil, cornerRadius: nil)
-        self.googleButton.backgroundColor = Colors.ligherPurple
-        self.googleButton.setTitle("         SIGN IN", for: .normal)
+        self.googleButton.setup(companyLogoName: "google-logo", width: nil, height: nil, cornerRadius: nil)
+        self.googleButton.backgroundColor = UIColor(white: 1, alpha: 0.15)
+        self.googleButton.setTitle("Sign in with Google", for: .normal)
     }
     
     // MARK: SetupFacebookButton
     private func setupFacebookButton() {
         setupFacebookButtonConstraints()
-        self.facebookButton.setup(companyLogoName: "facebook-logo", width: 160, height: nil, cornerRadius: nil)
-        self.facebookButton.backgroundColor = Colors.ligherPurple
-        self.facebookButton.setTitle("         SIGN IN", for: .normal)
+        self.facebookButton.setup(companyLogoName: "facebook-logo", width: nil, height: nil, cornerRadius: nil)
+        self.facebookButton.backgroundColor = UIColor(white: 1, alpha: 0.15)
+        self.facebookButton.setTitle("Sign in with Facebook", for: .normal)
     }
     
     // MARK: SetupCopyrightLabel
     private func setupCopyrightLabel() {
         setupCopyrightLabelConstraints()
-        self.copyrightLabel.text = "Copyright © 2021 superxmarket. All rights reserved."
-        self.copyrightLabel.textColor = Colors.ligherPurple
+        self.copyrightLabel.text = "Copyright © 2021 Superxmarket. All rights reserved."
+        self.copyrightLabel.textColor = .white
         self.copyrightLabel.textAlignment = .center
         self.copyrightLabel.font = UIFont(name: "Arial", size: 14)
     }

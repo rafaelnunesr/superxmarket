@@ -11,10 +11,11 @@ import UIKit
 struct Colors {
     
     // MARK: PURPLE
-    static let ligherPurple: UIColor = UIColor(red: 0.66, green: 0.50, blue: 0.90, alpha: 1.00)
-    static let mainPurple: UIColor = UIColor(red: 0.53, green: 0.32, blue: 0.88, alpha: 1.00)
+    static let lighterPurple: UIColor = UIColor(red: 0.69, green: 0.60, blue: 0.95, alpha: 1.00)
+    static let lightPurple: UIColor = UIColor(red: 0.51, green: 0.36, blue: 0.92, alpha: 1.00)
+    static let mainPurple: UIColor = UIColor(red: 0.40, green: 0.22, blue: 0.91, alpha: 1.00)
     static let darkPurple: UIColor = UIColor(red: 0.38, green: 0.18, blue: 0.67, alpha: 1.00)
-    static let darkerPurple: UIColor = UIColor(red: 0.20, green: 0.04, blue: 0.26, alpha: 1.00)
+    static let darkerPurple: UIColor = UIColor(red: 0.18, green: 0.09, blue: 0.44, alpha: 1.00)
     
     // MARK: GREEN
     static let mainGreen: UIColor = UIColor(red: 0.40, green: 0.84, blue: 0.65, alpha: 1.00)

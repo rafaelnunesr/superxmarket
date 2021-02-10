@@ -27,23 +27,16 @@ extension UITextField {
     func setRightPaddingWithIcon(amount: CGFloat, iconSize: CGFloat ,iconSystemName: String, iconColor: UIColor) {
         let paddingView = UIView(frame: CGRect(x: 0, y: 0, width: amount, height: self.frame.size.height))
         
-        print("PaddingView width: \(paddingView.bounds.size.width)")
-        print("PaddingView height: \(paddingView.bounds.size.height)")
-        
-        
         let icon = UIImageView(frame: CGRect(x: 0, y: 0, width: iconSize, height: iconSize))
-        icon.image = UIImage(systemName: iconSystemName)
+        icon.image = UIImage(named: iconSystemName)
         paddingView.addSubview(icon)
-        
-        print("icon width: \(icon.bounds.size.width)")
-        print("icon height: \(icon.bounds.size.height)")
         
         let frameSize = self.frame.size.height
         
         icon.centerYAnchor.constraint(equalTo: paddingView.centerYAnchor).isActive = true
         icon.leadingAnchor.constraint(equalTo: paddingView.leadingAnchor, constant: amount)
         
-        icon.contentMode = .scaleAspectFit
+        icon.contentMode = .scaleAspectFill
         icon.tintColor = iconColor
         
         self.rightView = paddingView

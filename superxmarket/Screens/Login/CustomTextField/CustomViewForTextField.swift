@@ -14,9 +14,9 @@ class CustomViewForTextField: UIView {
     var bottomLine: UIView = UIView()
     var textField: UITextField = UITextField()
     
-    func setup(rightIconSystemName: String, placeholder: String) {
+    func setup(rightIcon: String, placeholder: String) {
         self.addSubviews()
-        self.setRightImageView(rightIconSystemName: rightIconSystemName)
+        self.setRightImageView(rightIcon: rightIcon)
         self.setBottomLine()
     }
     
@@ -26,15 +26,15 @@ class CustomViewForTextField: UIView {
         self.addSubview(self.textField)
     }
     
-    func setRightImageView(rightIconSystemName: String) {
+    func setRightImageView(rightIcon: String) {
         self.setRightImageViewConstraints()
-        self.rightImageView.image = UIImage(systemName: rightIconSystemName)
-        self.rightImageView.tintColor = Colors.ligherPurple
+        self.rightImageView.image = UIImage(named: rightIcon)
+        self.rightImageView.tintColor = Colors.lighterPurple
     }
     
     func setBottomLine() {
         self.setBottomLineConstraints()
-        self.bottomLine.backgroundColor = Colors.ligherPurple
+        self.bottomLine.backgroundColor = Colors.lighterPurple
     }
     
     func setRightImageViewConstraints() {
@@ -43,8 +43,8 @@ class CustomViewForTextField: UIView {
         var constraints = [NSLayoutConstraint]()
         
         constraints.append(self.rightImageView.centerYAnchor.constraint(equalTo: self.centerYAnchor))
-        constraints.append(self.rightImageView.heightAnchor.constraint(equalToConstant: 35))
-        constraints.append(self.rightImageView.widthAnchor.constraint(equalToConstant: 35))
+        //constraints.append(self.rightImageView.heightAnchor.constraint(equalToConstant: 35))
+        constraints.append(self.rightImageView.widthAnchor.constraint(equalToConstant: 20))
         
         NSLayoutConstraint.activate(constraints)
     }

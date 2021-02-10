@@ -33,7 +33,7 @@ extension LoginViewController {
         constraints.append(emailTextField.topAnchor.constraint(equalTo: superxLogo.bottomAnchor))
         constraints.append(emailTextField.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 20))
         constraints.append(emailTextField.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -20))
-        constraints.append(emailTextField.heightAnchor.constraint(equalToConstant: 50))
+        constraints.append(emailTextField.heightAnchor.constraint(equalToConstant: 52))
         
         NSLayoutConstraint.activate(constraints)
     }
@@ -47,7 +47,7 @@ extension LoginViewController {
         constraints.append(passwordTextField.topAnchor.constraint(equalTo: emailTextField.bottomAnchor, constant: 10))
         constraints.append(passwordTextField.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 20))
         constraints.append(passwordTextField.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -20))
-        constraints.append(passwordTextField.heightAnchor.constraint(equalToConstant: 50))
+        constraints.append(passwordTextField.heightAnchor.constraint(equalToConstant: 52))
         
         NSLayoutConstraint.activate(constraints)
     }
@@ -57,7 +57,7 @@ extension LoginViewController {
         continueButton.translatesAutoresizingMaskIntoConstraints = false
         var constraints = [NSLayoutConstraint]()
         
-        constraints.append(continueButton.topAnchor.constraint(equalTo: passwordTextField.bottomAnchor, constant: 20))
+        constraints.append(continueButton.topAnchor.constraint(equalTo: passwordTextField.bottomAnchor, constant: 15))
         constraints.append(continueButton.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 20))
         constraints.append(continueButton.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -20))
         
@@ -91,10 +91,10 @@ extension LoginViewController {
         lineView.translatesAutoresizingMaskIntoConstraints = false
         var constraints = [NSLayoutConstraint]()
         
-        constraints.append(lineView.topAnchor.constraint(equalTo: self.signupButton.bottomAnchor, constant: 30))
+        constraints.append(lineView.topAnchor.constraint(equalTo: self.signupButton.bottomAnchor, constant: 20))
         constraints.append(lineView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 20))
         constraints.append(lineView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -20))
-        constraints.append(lineView.heightAnchor.constraint(equalToConstant: 1))
+        constraints.append(lineView.heightAnchor.constraint(equalToConstant: 0.7))
         
         NSLayoutConstraint.activate(constraints)
     }
@@ -106,6 +106,7 @@ extension LoginViewController {
         
         constraints.append(googleButton.topAnchor.constraint(equalTo: lineView.bottomAnchor, constant: 20))
         constraints.append(googleButton.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 20))
+        constraints.append(googleButton.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -20))
         
         NSLayoutConstraint.activate(constraints)
     }
@@ -115,7 +116,8 @@ extension LoginViewController {
         facebookButton.translatesAutoresizingMaskIntoConstraints = false
         var constraints = [NSLayoutConstraint]()
         
-        constraints.append(facebookButton.topAnchor.constraint(equalTo: lineView.bottomAnchor, constant: 20))
+        constraints.append(facebookButton.topAnchor.constraint(equalTo: googleButton.bottomAnchor, constant: 10))
+        constraints.append(facebookButton.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 20))
         constraints.append(facebookButton.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -20))
         
         NSLayoutConstraint.activate(constraints)
@@ -125,7 +127,7 @@ extension LoginViewController {
         copyrightLabel.translatesAutoresizingMaskIntoConstraints = false
         var constraints = [NSLayoutConstraint]()
         
-        constraints.append(copyrightLabel.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -10))
+        constraints.append(copyrightLabel.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -3))
         constraints.append(copyrightLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor))
         
         NSLayoutConstraint.activate(constraints)
