@@ -13,11 +13,11 @@ extension LoginViewController {
     // MARK: SetupSuperxLogoConstraints
     func setupSuperxLogoConstraints() {
         superxLogo.translatesAutoresizingMaskIntoConstraints = false
-        let logoSize: CGFloat = 250
+        let logoSize: CGFloat = 230
         
         var constraints = [NSLayoutConstraint]()
         
-        constraints.append(superxLogo.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 20))
+        constraints.append(superxLogo.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 40))
         constraints.append(superxLogo.centerXAnchor.constraint(equalTo: view.centerXAnchor))
         constraints.append(superxLogo.widthAnchor.constraint(equalToConstant: logoSize))
         constraints.append(superxLogo.heightAnchor.constraint(equalToConstant: logoSize))
@@ -30,7 +30,7 @@ extension LoginViewController {
         emailTextField.translatesAutoresizingMaskIntoConstraints = false
         var constraints = [NSLayoutConstraint]()
         
-        constraints.append(emailTextField.topAnchor.constraint(equalTo: superxLogo.bottomAnchor))
+        constraints.append(emailTextField.topAnchor.constraint(equalTo: superxLogo.bottomAnchor, constant: 70))
         constraints.append(emailTextField.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 20))
         constraints.append(emailTextField.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -20))
         constraints.append(emailTextField.heightAnchor.constraint(equalToConstant: 52))

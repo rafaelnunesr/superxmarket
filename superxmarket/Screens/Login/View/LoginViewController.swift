@@ -95,7 +95,7 @@ class LoginViewController: UIViewController {
     // MARK: SetupSuperxLogo
     private func setupSuperxLogo() {
         setupSuperxLogoConstraints()
-        self.superxLogo.image = UIImage(named: "superxLogo")
+        self.superxLogo.image = UIImage(named: "logo")
         self.superxLogo.layer.masksToBounds = true
         self.superxLogo.contentMode = .scaleAspectFit
     }
