@@ -7,6 +7,7 @@ target 'superxmarket' do
 
   # Pods for superxmarket
   pod 'EmailValidator'
+  pod 'LoremIpsum', '~> 1.0'
 
   target 'superxmarketTests' do
     inherit! :search_paths

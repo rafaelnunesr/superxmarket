@@ -12,6 +12,8 @@
 		1B03EA9125BF042400CB8399 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1B03EA9025BF042400CB8399 /* Login.storyboard */; };
 		1B03EA9825BF048600CB8399 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B03EA9725BF048600CB8399 /* Colors.swift */; };
 		1B03EAA025BF322100CB8399 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B03EA9F25BF322100CB8399 /* CustomButton.swift */; };
+		1B14690B25D7252D00DBBA80 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B14690A25D7252D00DBBA80 /* CustomTextField.swift */; };
+		1B14691025D72E1000DBBA80 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 1B14690F25D72E1000DBBA80 /* .gitignore */; };
 		1B20DF1A25BF36A7009104DC /* CustomSignInButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B20DF1925BF36A7009104DC /* CustomSignInButton.swift */; };
 		1B20DF2325BF3FE9009104DC /* CustomButtonDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B20DF2225BF3FE9009104DC /* CustomButtonDelegate.swift */; };
 		1B391E3725C0480D007AF561 /* CustomSignInButtonConstraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B391E3625C0480D007AF561 /* CustomSignInButtonConstraints.swift */; };
@@ -58,6 +60,8 @@
 		1B03EA9025BF042400CB8399 /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		1B03EA9725BF048600CB8399 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		1B03EA9F25BF322100CB8399 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
+		1B14690A25D7252D00DBBA80 /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
+		1B14690F25D72E1000DBBA80 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = SOURCE_ROOT; };
 		1B20DF1925BF36A7009104DC /* CustomSignInButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSignInButton.swift; sourceTree = "<group>"; };
 		1B20DF2225BF3FE9009104DC /* CustomButtonDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButtonDelegate.swift; sourceTree = "<group>"; };
 		1B391E3625C0480D007AF561 /* CustomSignInButtonConstraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSignInButtonConstraints.swift; sourceTree = "<group>"; };
@@ -171,6 +175,14 @@
 			path = CustomsButton;
 			sourceTree = "<group>";
 		};
+		1B14690925D7250F00DBBA80 /* Custom Components */ = {
+			isa = PBXGroup;
+			children = (
+				1B14690A25D7252D00DBBA80 /* CustomTextField.swift */,
+			);
+			path = "Custom Components";
+			sourceTree = "<group>";
+		};
 		1B20DF2125BF3FCE009104DC /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
@@ -212,6 +224,7 @@
 		1B839AE725BEFB5D006342F4 /* superxmarket */ = {
 			isa = PBXGroup;
 			children = (
+				1B14690925D7250F00DBBA80 /* Custom Components */,
 				1BC829B825BF8B6F00488C88 /* Extentions */,
 				1B03EA9525BF045800CB8399 /* Supporting Files */,
 				1B839B1B25BEFB8A006342F4 /* Screens */,
@@ -219,6 +232,7 @@
 				1B839AEC25BEFB5D006342F4 /* ViewController.swift */,
 				1B839AEE25BEFB5D006342F4 /* Main.storyboard */,
 				1B839AF625BEFB5E006342F4 /* Info.plist */,
+				1B14690F25D72E1000DBBA80 /* .gitignore */,
 			);
 			path = superxmarket;
 			sourceTree = "<group>";
@@ -421,6 +435,7 @@
 				1B839AF525BEFB5E006342F4 /* LaunchScreen.storyboard in Resources */,
 				1B839AF225BEFB5E006342F4 /* Assets.xcassets in Resources */,
 				1BD8812F25D58A610080FBFC /* Signup.storyboard in Resources */,
+				1B14691025D72E1000DBBA80 /* .gitignore in Resources */,
 				1B839AF025BEFB5D006342F4 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -557,6 +572,7 @@
 				1B03EA9825BF048600CB8399 /* Colors.swift in Sources */,
 				1B03EAA025BF322100CB8399 /* CustomButton.swift in Sources */,
 				1BC829AB25BF834200488C88 /* LoginViewControllerConstraints.swift in Sources */,
+				1B14690B25D7252D00DBBA80 /* CustomTextField.swift in Sources */,
 				1B391E3F25C04D1E007AF561 /* UITextFieldExtension.swift in Sources */,
 				1B839AED25BEFB5D006342F4 /* ViewController.swift in Sources */,
 				1BD8812A25D587360080FBFC /* SignUpViewController.swift in Sources */,

@@ -11,11 +11,11 @@ class SignUpViewController: UIViewController {
     
     let header: UIView = UIView()
     let profilePhoto: UIImageView = UIImageView()
-    let userNameTextField: UITextField = UITextField()
-    let emailTextField: UITextField = UITextField()
-    let phoneNumberTextField: UITextField = UITextField()
-    let birthdayTextField: UITextField = UITextField()
-    let addressTextField: UITextField = UITextField()
+    let userNameTextField: CustomTextField = CustomTextField()
+    let emailTextField: CustomTextField = CustomTextField()
+    let phoneNumberTextField: CustomTextField = CustomTextField()
+    let birthdayTextField: CustomTextField = CustomTextField()
+    let addressTextField: CustomTextField = CustomTextField()
     let checkbox: UIButton = UIButton()
     let termsConditionsLabel: UILabel = UILabel()
     let signupButton: UIButton = UIButton()
@@ -56,6 +56,11 @@ class SignUpViewController: UIViewController {
     private func setupComponents() {
         self.setupHeader()
         self.setupProfilePhoto()
+        self.setupUserNameTextField()
+        self.setupEmailTextField()
+        self.setupPhoneNumber()
+        self.setupBirthday()
+        self.setupAddressTextField()
     }
     
     private func setupHeader() {
@@ -83,7 +88,7 @@ class SignUpViewController: UIViewController {
         self.profilePhoto.layer.cornerRadius = 75
     }
     
-    private func addProfilePhotoConstraints() {
+    func addProfilePhotoConstraints() {
         profilePhoto.translatesAutoresizingMaskIntoConstraints = false
         let profilePhotoSize: CGFloat = 150
 
@@ -97,5 +102,89 @@ class SignUpViewController: UIViewController {
         NSLayoutConstraint.activate(constraints)
     }
     
+    private func setupUserNameTextField() {
+        addUserNameTextFieldConstraints()
+        self.userNameTextField.setup(iconName: "person", placeholder: "Full Name")
+    }
+    
+    func addUserNameTextFieldConstraints() {
+        userNameTextField.translatesAutoresizingMaskIntoConstraints = false
+        
+        var constraints = [NSLayoutConstraint]()
+        
+        constraints.append(userNameTextField.topAnchor.constraint(equalTo: profilePhoto.bottomAnchor, constant: 44))
+        constraints.append(userNameTextField.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16))
+        constraints.append(userNameTextField.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -16))
+        
+        NSLayoutConstraint.activate(constraints)
+    }
+    
+    private func setupEmailTextField() {
+        addEmailTextFieldConstraints()
+        self.emailTextField.setup(iconName: "mail", placeholder: "Email Address")
+    }
+    
+    func addEmailTextFieldConstraints() {
+        emailTextField.translatesAutoresizingMaskIntoConstraints = false
+        
+        var constraints = [NSLayoutConstraint]()
+        
+        constraints.append(emailTextField.topAnchor.constraint(equalTo: userNameTextField.bottomAnchor, constant: 16))
+        constraints.append(emailTextField.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16))
+        constraints.append(emailTextField.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -16))
+        
+        NSLayoutConstraint.activate(constraints)
+    }
+    
+    private func setupPhoneNumber() {
+        addPhoneNumberConstraints()
+        self.phoneNumberTextField.setup(iconName: "phone", placeholder: "Phone Number")
+    }
+    
+    func addPhoneNumberConstraints() {
+        phoneNumberTextField.translatesAutoresizingMaskIntoConstraints = false
+        
+        var constraints = [NSLayoutConstraint]()
+        
+        constraints.append(phoneNumberTextField.topAnchor.constraint(equalTo: emailTextField.bottomAnchor, constant: 16))
+        constraints.append(phoneNumberTextField.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16))
+        constraints.append(phoneNumberTextField.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -16))
+        
+        NSLayoutConstraint.activate(constraints)
+    }
+    
+    private func setupBirthday() {
+        addBirthdayConstraints()
+        self.birthdayTextField.setup(iconName: "calendar", placeholder: "Birthday")
+    }
+    
+    func addBirthdayConstraints() {
+        birthdayTextField.translatesAutoresizingMaskIntoConstraints = false
+        
+        var constraints = [NSLayoutConstraint]()
+        
+        constraints.append(birthdayTextField.topAnchor.constraint(equalTo: phoneNumberTextField.bottomAnchor, constant: 16))
+        constraints.append(birthdayTextField.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16))
+        constraints.append(birthdayTextField.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -16))
+        
+        NSLayoutConstraint.activate(constraints)
+    }
+
+    private func setupAddressTextField() {
+        addAddressTextFieldConstraints()
+        self.addressTextField.setup(iconName: "home", placeholder: "Address")
+    }
+    
+    func addAddressTextFieldConstraints() {
+        addressTextField.translatesAutoresizingMaskIntoConstraints = false
+        
+        var constraints = [NSLayoutConstraint]()
+        
+        constraints.append(addressTextField.topAnchor.constraint(equalTo: birthdayTextField.bottomAnchor, constant: 16))
+        constraints.append(addressTextField.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16))
+        constraints.append(addressTextField.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -16))
+        
+        NSLayoutConstraint.activate(constraints)
+    }
 
 }
