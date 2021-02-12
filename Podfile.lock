@@ -1,16 +1,20 @@
 PODS:
   - EmailValidator (1.0.2)
+  - LoremIpsum (1.0.0)
 
 DEPENDENCIES:
   - EmailValidator
+  - LoremIpsum (~> 1.0)
 
 SPEC REPOS:
   trunk:
     - EmailValidator
+    - LoremIpsum
 
 SPEC CHECKSUMS:
   EmailValidator: 366dc0ddedcc457ae14d269fa056416a6730d6ea
+  LoremIpsum: 9029c55d36501b2ee0b05cc9ecda11d3a0479160
 
-PODFILE CHECKSUM: 1ddcfef2722910bcfd4e5547c90b29aaf0a9b963
+PODFILE CHECKSUM: c243b2c455021c7c67aeb840f01224ea2a9430ba
 
 COCOAPODS: 1.10.0
