@@ -242,6 +242,8 @@ class SignUpViewController: UIViewController {
         self.signupButton.backgroundColor = Colors.mainPurple
         self.signupButton.setTitle("Sign Up", for: .normal)
         self.signupButton.tintColor = .white
+        
+        self.signupButton.layer.cornerRadius = 10
     }
     
     func addSignupButtonConstraints() {
@@ -250,7 +252,7 @@ class SignUpViewController: UIViewController {
         var constraints = [NSLayoutConstraint]()
         
         constraints.append(signupButton.topAnchor.constraint(equalTo: checkbox.bottomAnchor, constant: 16))
-        constraints.append(signupButton.leadingAnchor.constraint(equalTo: checkbox.trailingAnchor, constant: 16))
+        constraints.append(signupButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16))
         constraints.append(signupButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -16))
         constraints.append(signupButton.heightAnchor.constraint(equalToConstant: 52))
         
