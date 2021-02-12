@@ -1,20 +1,24 @@
 PODS:
   - EmailValidator (1.0.2)
+  - IQKeyboardManagerSwift (6.5.6)
   - LoremIpsum (1.0.0)
 
 DEPENDENCIES:
   - EmailValidator
+  - IQKeyboardManagerSwift (~> 6.5)
   - LoremIpsum (~> 1.0)
 
 SPEC REPOS:
   trunk:
     - EmailValidator
+    - IQKeyboardManagerSwift
     - LoremIpsum
 
 SPEC CHECKSUMS:
   EmailValidator: 366dc0ddedcc457ae14d269fa056416a6730d6ea
+  IQKeyboardManagerSwift: c7df9d2deb356c04522f5c4b7b6e4ce4d8ed94fe
   LoremIpsum: 9029c55d36501b2ee0b05cc9ecda11d3a0479160
 
-PODFILE CHECKSUM: c243b2c455021c7c67aeb840f01224ea2a9430ba
+PODFILE CHECKSUM: 3754f5e4a803d61dba48d3d2a0d9cc6ab7b19b67
 
 COCOAPODS: 1.10.0
