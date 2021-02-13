@@ -10,6 +10,7 @@ import UIKit
 
 extension UIFont {
     
+    // MARK: Roboto Thin
     static func robotoThin(size: CGFloat) -> UIFont {
         guard let roboto = UIFont(name: "Roboto-Thin", size: size) else {
             fatalError("""
@@ -20,6 +21,7 @@ extension UIFont {
         return roboto
     }
     
+    // MARK: Roboto Regular
     static func robotoRegular(size: CGFloat) -> UIFont {
         guard let roboto = UIFont(name: "Roboto-Regular", size: size) else {
             fatalError("""
@@ -30,6 +32,7 @@ extension UIFont {
         return roboto
     }
     
+    // MARK: Roboto Medium
     static func robotoMedium(size: CGFloat) -> UIFont {
         guard let roboto = UIFont(name: "Roboto-medium", size: size) else {
             fatalError("""
@@ -40,6 +43,7 @@ extension UIFont {
         return roboto
     }
     
+    // MARK: Roboto Light
     static func robotoLight(size: CGFloat) -> UIFont {
         guard let roboto = UIFont(name: "Roboto-Light", size: size) else {
             fatalError("""
@@ -50,6 +54,7 @@ extension UIFont {
         return roboto
     }
     
+    // MARK: Roboto Bold
     static func robotoBold(size: CGFloat) -> UIFont {
         guard let roboto = UIFont(name: "Roboto-Bold", size: size) else {
             fatalError("""
@@ -60,6 +65,7 @@ extension UIFont {
         return roboto
     }
     
+    // Mark: Roboto Black
     static func robotoBlack(size: CGFloat) -> UIFont {
         guard let roboto = UIFont(name: "Roboto-Black", size: size) else {
             fatalError("""
