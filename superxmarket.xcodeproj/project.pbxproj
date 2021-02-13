@@ -27,6 +27,12 @@
 		1B839AF525BEFB5E006342F4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1B839AF325BEFB5E006342F4 /* LaunchScreen.storyboard */; };
 		1B839B0025BEFB5E006342F4 /* superxmarketTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B839AFF25BEFB5E006342F4 /* superxmarketTests.swift */; };
 		1B839B0B25BEFB5E006342F4 /* superxmarketUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B839B0A25BEFB5E006342F4 /* superxmarketUITests.swift */; };
+		1B97079525D81545001291B2 /* Roboto-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1BAF536925D80BE2003514AA /* Roboto-Black.ttf */; };
+		1B97079925D81548001291B2 /* Roboto-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1BAF537025D80BE3003514AA /* Roboto-Bold.ttf */; };
+		1B97079D25D8154C001291B2 /* Roboto-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1BAF537425D80BE3003514AA /* Roboto-Light.ttf */; };
+		1B9707A125D8154F001291B2 /* Roboto-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1BAF536B25D80BE2003514AA /* Roboto-Medium.ttf */; };
+		1B9707A525D81551001291B2 /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1BAF536F25D80BE2003514AA /* Roboto-Regular.ttf */; };
+		1B9707A925D81554001291B2 /* Roboto-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1BAF537325D80BE3003514AA /* Roboto-Thin.ttf */; };
 		1BAF537925D80E8A003514AA /* UIFontExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BAF537825D80E8A003514AA /* UIFontExtension.swift */; };
 		1BC829AB25BF834200488C88 /* LoginViewControllerConstraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BC829AA25BF834200488C88 /* LoginViewControllerConstraints.swift */; };
 		1BC829B325BF836D00488C88 /* LoginViewControllerCustomButtonDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BC829B225BF836D00488C88 /* LoginViewControllerCustomButtonDelegate.swift */; };
@@ -462,12 +468,18 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1B9707A125D8154F001291B2 /* Roboto-Medium.ttf in Resources */,
+				1B9707A525D81551001291B2 /* Roboto-Regular.ttf in Resources */,
 				1B03EA9125BF042400CB8399 /* Login.storyboard in Resources */,
 				1B839AF525BEFB5E006342F4 /* LaunchScreen.storyboard in Resources */,
 				1B839AF225BEFB5E006342F4 /* Assets.xcassets in Resources */,
 				1BD8812F25D58A610080FBFC /* Signup.storyboard in Resources */,
+				1B97079525D81545001291B2 /* Roboto-Black.ttf in Resources */,
 				1B14691025D72E1000DBBA80 /* .gitignore in Resources */,
+				1B9707A925D81554001291B2 /* Roboto-Thin.ttf in Resources */,
+				1B97079925D81548001291B2 /* Roboto-Bold.ttf in Resources */,
 				1B839AF025BEFB5D006342F4 /* Main.storyboard in Resources */,
+				1B97079D25D8154C001291B2 /* Roboto-Light.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

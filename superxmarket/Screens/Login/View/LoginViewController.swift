@@ -105,7 +105,7 @@ class LoginViewController: UIViewController {
         setupEmailTextFieldConstraints()
         self.emailTextField.backgroundColor = UIColor(white: 1, alpha: 0.15)
         self.emailTextField.layer.cornerRadius = 10
-        self.emailTextField.setRightPaddingWithIcon(amount: 10, iconSize: 25, iconSystemName: "person", iconColor: .white)
+        self.emailTextField.setLeftPaddingWithIcon(amount: 10, iconSize: 25, iconSystemName: "person", iconColor: .white)
         self.emailTextField.setPlaceholderWithColor(placeholder: "Email", color: .white)
         self.emailTextField.textColor = .white
         self.emailTextField.keyboardType = .emailAddress
@@ -115,7 +115,7 @@ class LoginViewController: UIViewController {
     private func setupPasswordTextField() {
         setupPasswordTextFieldConstraints()
         self.passwordTextField.layer.cornerRadius = 10
-        self.passwordTextField.setRightPaddingWithIcon(amount: 10, iconSize: 25, iconSystemName: "lock", iconColor: .white)
+        self.passwordTextField.setLeftPaddingWithIcon(amount: 10, iconSize: 25, iconSystemName: "lock", iconColor: .white)
         self.passwordTextField.setPlaceholderWithColor(placeholder: "Password", color: .white)
         self.passwordTextField.textColor = .white
         self.passwordTextField.isSecureTextEntry = true
@@ -128,6 +128,7 @@ class LoginViewController: UIViewController {
         setupContinueButtonConstraints()
         self.continueButton.setTitle("Sign In", for: .normal)
         self.continueButton.backgroundColor = Colors.darkerPurple.withAlphaComponent(0.65)
+        self.continueButton.titleLabel?.font = UIFont.robotoMedium(size: 18)
     }
     
     // MARK: SetupRecoverPasswordButton
@@ -137,6 +138,7 @@ class LoginViewController: UIViewController {
         self.recoverPasswordButton.setTitle("Forgot Password", for: .normal)
         self.recoverPasswordButton.contentHorizontalAlignment = UIControl.ContentHorizontalAlignment.left
         self.recoverPasswordButton.setTitleColor(.white, for: .normal)
+        self.recoverPasswordButton.titleLabel?.font = UIFont.robotoMedium(size: 15)
 
     }
     
@@ -144,6 +146,7 @@ class LoginViewController: UIViewController {
     private func setupSignupButton() {
         self.signupButton.setup(width: 160, height: 20, cornerRadius: nil)
         setupSignupButtonConstraints()
+        self.signupButton.titleLabel?.font = UIFont.robotoMedium(size: 15)
         self.signupButton.setTitle("Sign Up", for: .normal)
         self.signupButton.contentHorizontalAlignment = UIControl.ContentHorizontalAlignment.right
         self.signupButton.setTitleColor(.white, for: .normal)
@@ -162,6 +165,7 @@ class LoginViewController: UIViewController {
         self.googleButton.setup(companyLogoName: "google-logo", width: nil, height: nil, cornerRadius: nil)
         self.googleButton.backgroundColor = UIColor(white: 1, alpha: 0.15)
         self.googleButton.setTitle("Sign in with Google", for: .normal)
+        self.googleButton.titleLabel?.font = UIFont.robotoMedium(size: 18)
     }
     
     // MARK: SetupFacebookButton
@@ -170,6 +174,7 @@ class LoginViewController: UIViewController {
         self.facebookButton.setup(companyLogoName: "facebook-logo", width: nil, height: nil, cornerRadius: nil)
         self.facebookButton.backgroundColor = UIColor(white: 1, alpha: 0.15)
         self.facebookButton.setTitle("Sign in with Facebook", for: .normal)
+        self.facebookButton.titleLabel?.font = UIFont.robotoMedium(size: 18)
     }
     
     // MARK: SetupCopyrightLabel
@@ -178,7 +183,7 @@ class LoginViewController: UIViewController {
         self.copyrightLabel.text = "Copyright © 2021 Superxmarket. All rights reserved."
         self.copyrightLabel.textColor = .white
         self.copyrightLabel.textAlignment = .center
-        self.copyrightLabel.font = UIFont(name: "Arial", size: 14)
+        self.copyrightLabel.font = UIFont.robotoRegular(size: 13)
     }
     
 }

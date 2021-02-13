@@ -31,13 +31,7 @@ class CustomViewForTextField: UIView {
         self.rightImageView.image = UIImage(named: rightIcon)
         self.rightImageView.tintColor = Colors.lighterPurple
         
-        guard let robotoBold = UIFont(name: "Roboto-Bold", size: 18) else {
-            fatalError("""
-                Error loading Roboto Bold font.
-                """)
-        }
-        
-        self.textField.font = UIFontMetrics.default.scaledFont(for: robotoBold)
+        self.textField.font = UIFontMetrics.default.scaledFont(for: UIFont.robotoBold(size: 18))
         self.textField.adjustsFontForContentSizeCategory = true
     }
     
