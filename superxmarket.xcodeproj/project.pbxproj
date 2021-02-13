@@ -27,6 +27,7 @@
 		1B839AF525BEFB5E006342F4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1B839AF325BEFB5E006342F4 /* LaunchScreen.storyboard */; };
 		1B839B0025BEFB5E006342F4 /* superxmarketTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B839AFF25BEFB5E006342F4 /* superxmarketTests.swift */; };
 		1B839B0B25BEFB5E006342F4 /* superxmarketUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B839B0A25BEFB5E006342F4 /* superxmarketUITests.swift */; };
+		1BAF537925D80E8A003514AA /* UIFontExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BAF537825D80E8A003514AA /* UIFontExtension.swift */; };
 		1BC829AB25BF834200488C88 /* LoginViewControllerConstraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BC829AA25BF834200488C88 /* LoginViewControllerConstraints.swift */; };
 		1BC829B325BF836D00488C88 /* LoginViewControllerCustomButtonDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BC829B225BF836D00488C88 /* LoginViewControllerCustomButtonDelegate.swift */; };
 		1BC829BA25BF8B8600488C88 /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BC829B925BF8B8600488C88 /* UIViewExtension.swift */; };
@@ -87,6 +88,7 @@
 		1BAF537025D80BE3003514AA /* Roboto-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Bold.ttf"; sourceTree = "<group>"; };
 		1BAF537325D80BE3003514AA /* Roboto-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Thin.ttf"; sourceTree = "<group>"; };
 		1BAF537425D80BE3003514AA /* Roboto-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Light.ttf"; sourceTree = "<group>"; };
+		1BAF537825D80E8A003514AA /* UIFontExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIFontExtension.swift; sourceTree = "<group>"; };
 		1BC829AA25BF834200488C88 /* LoginViewControllerConstraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewControllerConstraints.swift; sourceTree = "<group>"; };
 		1BC829B225BF836D00488C88 /* LoginViewControllerCustomButtonDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewControllerCustomButtonDelegate.swift; sourceTree = "<group>"; };
 		1BC829B925BF8B8600488C88 /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
@@ -307,6 +309,7 @@
 			children = (
 				1BC829B925BF8B8600488C88 /* UIViewExtension.swift */,
 				1B391E3E25C04D1E007AF561 /* UITextFieldExtension.swift */,
+				1BAF537825D80E8A003514AA /* UIFontExtension.swift */,
 			);
 			path = Extentions;
 			sourceTree = "<group>";
@@ -601,6 +604,7 @@
 				1B03EAA025BF322100CB8399 /* CustomButton.swift in Sources */,
 				1BC829AB25BF834200488C88 /* LoginViewControllerConstraints.swift in Sources */,
 				1B14690B25D7252D00DBBA80 /* CustomTextField.swift in Sources */,
+				1BAF537925D80E8A003514AA /* UIFontExtension.swift in Sources */,
 				1B391E3F25C04D1E007AF561 /* UITextFieldExtension.swift in Sources */,
 				1B839AED25BEFB5D006342F4 /* ViewController.swift in Sources */,
 				1BD8812A25D587360080FBFC /* SignUpViewController.swift in Sources */,

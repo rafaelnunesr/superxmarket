@@ -30,6 +30,15 @@ class CustomViewForTextField: UIView {
         self.setRightImageViewConstraints()
         self.rightImageView.image = UIImage(named: rightIcon)
         self.rightImageView.tintColor = Colors.lighterPurple
+        
+        guard let robotoBold = UIFont(name: "Roboto-Bold", size: 18) else {
+            fatalError("""
+                Error loading Roboto Bold font.
+                """)
+        }
+        
+        self.textField.font = UIFontMetrics.default.scaledFont(for: robotoBold)
+        self.textField.adjustsFontForContentSizeCategory = true
     }
     
     func setBottomLine() {
@@ -43,7 +52,6 @@ class CustomViewForTextField: UIView {
         var constraints = [NSLayoutConstraint]()
         
         constraints.append(self.rightImageView.centerYAnchor.constraint(equalTo: self.centerYAnchor))
-        //constraints.append(self.rightImageView.heightAnchor.constraint(equalToConstant: 35))
         constraints.append(self.rightImageView.widthAnchor.constraint(equalToConstant: 20))
         
         NSLayoutConstraint.activate(constraints)
