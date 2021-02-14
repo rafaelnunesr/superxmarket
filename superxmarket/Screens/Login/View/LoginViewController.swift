@@ -12,7 +12,6 @@ class LoginViewController: UIViewController {
     // MARK: Components
     var superxLogo: UIImageView = UIImageView()
     var emailTextField: LoginTextField = LoginTextField()
-    //var emailTextField: CustomViewForTextField = CustomViewForTextField()
     var passwordTextField: LoginTextField = LoginTextField()
     var continueButton: CustomButton = CustomButton()
     var recoverPasswordButton: CustomButton = CustomButton()
@@ -26,6 +25,8 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setup()
+        
+        navigationController?.isNavigationBarHidden = true
     }
     
     // MARK: StatusBarStyle
@@ -57,11 +58,9 @@ class LoginViewController: UIViewController {
     
     // MARK: SetupDelegates
     private func setupDelegates() {
-        //self.emailTextField.delegate = self
-        //CustomViewForTextFieldself.passwordTextField.delegate = self
+        self.emailTextField.delegate = self
+        self.passwordTextField.delegate = self
         self.continueButton.delegate = self
-        self.recoverPasswordButton.delegate = self
-        self.signupButton.delegate = self
         self.googleButton.delegate = self
         self.facebookButton.delegate = self
     }
@@ -103,7 +102,7 @@ class LoginViewController: UIViewController {
     // MARK: SetupEmailTextField
     private func setupEmailTextField() {
         setupEmailTextFieldConstraints()
-        self.emailTextField.setup(leftIcon: Icons.person, placeholder: "Email")
+        self.emailTextField.setup(icon: Icons.person, placeholder: "Email")
         self.emailTextField.keyboardType = .emailAddress
         self.emailTextField.autocapitalizationType = .none
     }
@@ -111,7 +110,7 @@ class LoginViewController: UIViewController {
     // MARK: SetupPasswordTextField
     private func setupPasswordTextField() {
         setupPasswordTextFieldConstraints()
-        self.passwordTextField.setup(leftIcon: Icons.lock, placeholder: "Password")
+        self.passwordTextField.setup(icon: Icons.lock, placeholder: "Password")
         self.passwordTextField.isSecureTextEntry = true
     }
     
@@ -144,6 +143,13 @@ class LoginViewController: UIViewController {
         self.signupButton.contentHorizontalAlignment = UIControl.ContentHorizontalAlignment.right
         self.signupButton.setTitleColor(.white, for: .normal)
     
+        self.signupButton.addTarget(self, action: #selector(signupTapped), for: .touchUpInside)
+    }
+    
+    @objc private func signupTapped() {
+        let vc = SignUpViewController()
+        vc.title = "Create an account"
+        navigationController?.pushViewController(vc, animated: true)
     }
     
     // MARK: SetupLineView
@@ -155,19 +161,13 @@ class LoginViewController: UIViewController {
     // MARK: SetupGoogleButton
     private func setupGoogleButton() {
         setupGoogleButtonConstraints()
-        self.googleButton.setup(companyLogoName: "google-logo", width: nil, height: nil, cornerRadius: nil)
-        self.googleButton.backgroundColor = UIColor(white: 1, alpha: 0.15)
-        self.googleButton.setTitle("Sign in with Google", for: .normal)
-        self.googleButton.titleLabel?.font = UIFont.robotoMedium(size: 18)
+        self.googleButton.setup(companyLogoName: CompaniesLogo.google, titleForButton: SignInButtonTitle.google)
     }
     
     // MARK: SetupFacebookButton
     private func setupFacebookButton() {
         setupFacebookButtonConstraints()
-        self.facebookButton.setup(companyLogoName: "facebook-logo", width: nil, height: nil, cornerRadius: nil)
-        self.facebookButton.backgroundColor = UIColor(white: 1, alpha: 0.15)
-        self.facebookButton.setTitle("Sign in with Facebook", for: .normal)
-        self.facebookButton.titleLabel?.font = UIFont.robotoMedium(size: 18)
+        self.facebookButton.setup(companyLogoName: CompaniesLogo.facebook, titleForButton: SignInButtonTitle.facebook)
     }
     
     // MARK: SetupCopyrightLabel
@@ -180,3 +180,4 @@ class LoginViewController: UIViewController {
     }
     
 }
+

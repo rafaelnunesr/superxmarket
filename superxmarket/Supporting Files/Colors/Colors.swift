@@ -29,4 +29,7 @@ struct Colors {
     static let darkerRed: UIColor =
         UIColor(red: 0.40, green: 0.11, blue: 0.04, alpha: 1.00)
     
+    
+    static let ligherTransparentWhite: UIColor = UIColor(white: 1, alpha: 0.15)
+
 }

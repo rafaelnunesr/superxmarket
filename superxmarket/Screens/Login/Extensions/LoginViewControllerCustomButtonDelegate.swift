@@ -9,6 +9,5 @@ import Foundation
 
 extension LoginViewController: CustomButtonDelegate {
     func tappedButton() {
-        print("tapped")
     }
 }

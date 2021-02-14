@@ -7,25 +7,32 @@
 
 import UIKit
 
+enum SignInButtonTitle: String {
+    case google = "Sign In with Google"
+    case facebook = "Sign In with Facebook"
+}
+
+enum CompaniesLogo: String {
+    case google = "google-logo"
+    case facebook = "facebook-logo"
+}
+
 class CustomSignInButton: CustomButton {
     
     // MARK: Components
-    var companyLogo: UIImageView = UIImageView()
-    var verticalLine: UIView = UIView()
-    var buttonTitle: String?
-    var companyLogoName: String?
-    var companyLogoImageSize: CGFloat = 30
+    let companyLogo: UIImageView = UIImageView()
+    let verticalLine: UIView = UIView()
+    var buttonTitle: SignInButtonTitle?
+    var companyLogoName: CompaniesLogo?
+    let companyLogoImageSize: CGFloat = 30
+    private let fontSize: CGFloat = 18
     
     // MARK: Setup
-    func setup(companyLogoName: String) -> Any {
+    func setup(companyLogoName: CompaniesLogo, titleForButton: SignInButtonTitle) {
         super.setup()
-        return self.setup(companyLogoName: companyLogoName, width: nil, height: nil, cornerRadius: nil)
-    }
-    
-    // MARK: Setup
-    func setup(companyLogoName: String, width: CGFloat?, height: CGFloat?, cornerRadius: CGFloat?) {
-        super.setup(width: width, height: height, cornerRadius: cornerRadius)
+        self.buttonTitle = titleForButton
         self.companyLogoName = companyLogoName
+        
         self.setupBasicSettings()
     }
     
@@ -34,6 +41,14 @@ class CustomSignInButton: CustomButton {
         self.addSubviews()
         self.setupLogoCompany()
         self.setupVerticalLine()
+        
+        self.backgroundColor = Colors.ligherTransparentWhite
+        
+        if let _buttonTitle = self.buttonTitle {
+            self.setTitle(_buttonTitle.rawValue, for: .normal)
+        }
+        
+        self.titleLabel?.font = UIFont.robotoMedium(size: self.fontSize)
     }
     
     // MARK: AddSubviews
@@ -45,7 +60,11 @@ class CustomSignInButton: CustomButton {
     // MARK: SetupLogoCompany
     private func setupLogoCompany() {
         setupCompanyLogoConstraints()
-        self.companyLogo.image = UIImage(named: self.companyLogoName ?? "")
+        
+        if let _companyLogo = self.companyLogoName {
+            self.companyLogo.image = UIImage(named: _companyLogo.rawValue)
+        }
+        
         self.companyLogo.contentMode = .scaleAspectFit
     }
     

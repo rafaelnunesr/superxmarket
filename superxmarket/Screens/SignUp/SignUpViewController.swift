@@ -23,6 +23,12 @@ class SignUpViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setup()
+        self.view.backgroundColor = UIColor(red: 0.97, green: 0.97, blue: 0.97, alpha: 1)
+        self.navigationController?.isNavigationBarHidden = false
+        self.navigationController?.navigationBar.barTintColor = Colors.mainPurple
+        
+        self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
+        self.navigationController?.navigationBar.isTranslucent = false
     }
     
     // MARK: StatusBarStyle
@@ -80,7 +86,7 @@ class SignUpViewController: UIViewController {
         constraints.append(header.topAnchor.constraint(equalTo: view.topAnchor))
         constraints.append(header.leadingAnchor.constraint(equalTo: view.leadingAnchor))
         constraints.append(header.trailingAnchor.constraint(equalTo: view.trailingAnchor))
-        constraints.append(header.heightAnchor.constraint(equalToConstant: 185))
+        constraints.append(header.heightAnchor.constraint(equalToConstant: 100))
         
         NSLayoutConstraint.activate(constraints)
     }
@@ -107,7 +113,9 @@ class SignUpViewController: UIViewController {
     
     private func setupUserNameTextField() {
         addUserNameTextFieldConstraints()
-        //self.userNameTextField.setup(iconName: , placeholder: "Full Name")
+        self.userNameTextField.setup(icon: Icons.person, placeholder: "Full Name")
+        self.userNameTextField.backgroundColor = .white
+        self.userNameTextField.addShadowEffect()
     }
     
     func addUserNameTextFieldConstraints() {
@@ -118,6 +126,7 @@ class SignUpViewController: UIViewController {
         constraints.append(userNameTextField.topAnchor.constraint(equalTo: profilePhoto.bottomAnchor, constant: 44))
         constraints.append(userNameTextField.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16))
         constraints.append(userNameTextField.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -16))
+        constraints.append(self.userNameTextField.heightAnchor.constraint(equalToConstant: 52))
         
         NSLayoutConstraint.activate(constraints)
     }

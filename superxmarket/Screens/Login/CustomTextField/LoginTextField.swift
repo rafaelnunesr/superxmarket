@@ -8,24 +8,11 @@
 import Foundation
 import UIKit
 
-enum Icons: String {
-    case person = "person"
-    case lock = "lock"
-}
-
 class LoginTextField: CustomTextField {
     
-    // MARK: Variables
-    let iconImageView: UIImageView = UIImageView()
-    let iconSize: CGFloat = 25
-    var leftIcon: Icons?
-    var textFieldPlaceholder: String?
-    var color: UIColor = .white
-    
     // MARK: Setup
-    func setup(leftIcon: Icons, placeholder: String) {
-        self.leftIcon = leftIcon
-        self.textFieldPlaceholder = placeholder
+    override func setup(icon: Icons, placeholder: String) {
+        super.setup(icon: icon, placeholder: placeholder)
         self.font = UIFontMetrics.default.scaledFont(for: UIFont.robotoBold(size: 18))
         self.autocorrectionType = .no
         self.adjustsFontForContentSizeCategory = true
@@ -33,13 +20,12 @@ class LoginTextField: CustomTextField {
     }
 
     // MARK: Setup
-    override internal func setup() {
-        super.setup()
+    func setup() {
         
         self.addSubviews()
-        self.backgroundColor = UIColor(white: 1, alpha: 0.15)
+        self.backgroundColor = Colors.ligherTransparentWhite
         
-        if leftIcon != nil {
+        if icon != nil {
             self.setupIconImageView()
         }
         
@@ -59,7 +45,7 @@ class LoginTextField: CustomTextField {
     private func setupIconImageView() {
         self.setIconImageViewConstraints()
     
-        iconImageView.image = UIImage(named: self.leftIcon!.rawValue)
+        iconImageView.image = UIImage(named: self.icon!.rawValue)
         
         self.addSubview(iconImageView)
         iconImageView.contentMode = .scaleAspectFill
@@ -82,5 +68,4 @@ class LoginTextField: CustomTextField {
     private func setupPlaceholder() {
         self.setPlaceholderWithColor(placeholder: textFieldPlaceholder!, color: self.color)
     }
-    
 }

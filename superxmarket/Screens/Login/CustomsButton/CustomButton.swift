@@ -14,7 +14,7 @@ class CustomButton: UIButton {
     
     // MARK: Components
     var width: CGFloat?
-    var height: CGFloat = 50
+    var height: CGFloat = 52
     var cornerRadius: CGFloat = 10
     
     // MARK: Setup
