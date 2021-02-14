@@ -10,31 +10,24 @@ import UIKit
 
 class CustomTextField: UITextField {
     
-    var height: CGFloat = 52
+    // MARK: Variables
+    let height: CGFloat = 52
+    let padding: CGFloat = 40
+    let cornerRadius: CGFloat = 10
     
-    func setup(iconName: String, placeholder: String) {
-        self.setupConstraints()
-        
-        self.layer.cornerRadius = 10
-        self.backgroundColor = .white
-        self.textColor = Colors.mainPurple
+    // MARK: Setup
+    func setup() {
+        self.layer.cornerRadius = cornerRadius
+        let paddingView = self.setPadding(amount: padding)
+        self.leftView = paddingView
+        self.leftViewMode = UITextField.ViewMode.always
+    }
+    
+    // MARK: AddShadowEffect
+    func addShadowEffect() {
         self.layer.shadowOffset = CGSize(width: 0, height: 3.0)
         self.layer.shadowOpacity = 0.3
         self.layer.shadowRadius = 4.0
         self.layer.shadowColor = UIColor.black.cgColor
-        
-        self.attributedPlaceholder = NSAttributedString(string: placeholder,
-                                                        attributes: [NSAttributedString.Key.foregroundColor: Colors.mainPurple])
     }
-    
-    private func setupConstraints() {
-        self.translatesAutoresizingMaskIntoConstraints = false
-        
-        var constraints = [NSLayoutConstraint]()
-        
-        constraints.append(self.heightAnchor.constraint(equalToConstant: height))
-        
-        NSLayoutConstraint.activate(constraints)
-    }
-    
 }

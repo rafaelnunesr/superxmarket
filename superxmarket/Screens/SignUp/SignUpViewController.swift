@@ -107,7 +107,7 @@ class SignUpViewController: UIViewController {
     
     private func setupUserNameTextField() {
         addUserNameTextFieldConstraints()
-        self.userNameTextField.setup(iconName: "person", placeholder: "Full Name")
+        //self.userNameTextField.setup(iconName: , placeholder: "Full Name")
     }
     
     func addUserNameTextFieldConstraints() {
@@ -124,7 +124,7 @@ class SignUpViewController: UIViewController {
     
     private func setupEmailTextField() {
         addEmailTextFieldConstraints()
-        self.emailTextField.setup(iconName: "mail", placeholder: "Email Address")
+        //self.emailTextField.setup(iconName: "mail", placeholder: "Email Address")
     }
     
     func addEmailTextFieldConstraints() {
@@ -141,7 +141,7 @@ class SignUpViewController: UIViewController {
     
     private func setupPhoneNumber() {
         addPhoneNumberConstraints()
-        self.phoneNumberTextField.setup(iconName: "phone", placeholder: "Phone Number")
+        //self.phoneNumberTextField.setup(iconName: "phone", placeholder: "Phone Number")
     }
     
     func addPhoneNumberConstraints() {
@@ -158,7 +158,7 @@ class SignUpViewController: UIViewController {
     
     private func setupBirthday() {
         addBirthdayConstraints()
-        self.birthdayTextField.setup(iconName: "calendar", placeholder: "Birthday")
+        //self.birthdayTextField.setup(iconName: "calendar", placeholder: "Birthday")
     }
     
     func addBirthdayConstraints() {
@@ -175,7 +175,7 @@ class SignUpViewController: UIViewController {
 
     private func setupAddressTextField() {
         addAddressTextFieldConstraints()
-        self.addressTextField.setup(iconName: "home", placeholder: "Address")
+        //self.addressTextField.setup(iconName: "home", placeholder: "Address")
     }
     
     func addAddressTextFieldConstraints() {

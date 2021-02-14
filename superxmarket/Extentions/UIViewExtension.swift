@@ -33,6 +33,7 @@ extension UIView {
         }
         
         self.layer.insertSublayer(gradient, at: UInt32(indexLayer))
+        
         return gradient
     }
     

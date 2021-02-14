@@ -11,9 +11,9 @@ class LoginViewController: UIViewController {
     
     // MARK: Components
     var superxLogo: UIImageView = UIImageView()
-    var emailTextField: UITextField = UITextField()
+    var emailTextField: LoginTextField = LoginTextField()
     //var emailTextField: CustomViewForTextField = CustomViewForTextField()
-    var passwordTextField: UITextField = UITextField()
+    var passwordTextField: LoginTextField = LoginTextField()
     var continueButton: CustomButton = CustomButton()
     var recoverPasswordButton: CustomButton = CustomButton()
     var signupButton: CustomButton = CustomButton()
@@ -58,7 +58,7 @@ class LoginViewController: UIViewController {
     // MARK: SetupDelegates
     private func setupDelegates() {
         //self.emailTextField.delegate = self
-        self.passwordTextField.delegate = self
+        //CustomViewForTextFieldself.passwordTextField.delegate = self
         self.continueButton.delegate = self
         self.recoverPasswordButton.delegate = self
         self.signupButton.delegate = self
@@ -103,23 +103,16 @@ class LoginViewController: UIViewController {
     // MARK: SetupEmailTextField
     private func setupEmailTextField() {
         setupEmailTextFieldConstraints()
-        self.emailTextField.backgroundColor = UIColor(white: 1, alpha: 0.15)
-        self.emailTextField.layer.cornerRadius = 10
-        self.emailTextField.setLeftPaddingWithIcon(amount: 10, iconSize: 25, iconSystemName: "person", iconColor: .white)
-        self.emailTextField.setPlaceholderWithColor(placeholder: "Email", color: .white)
-        self.emailTextField.textColor = .white
+        self.emailTextField.setup(leftIcon: Icons.person, placeholder: "Email")
         self.emailTextField.keyboardType = .emailAddress
+        self.emailTextField.autocapitalizationType = .none
     }
     
     // MARK: SetupPasswordTextField
     private func setupPasswordTextField() {
         setupPasswordTextFieldConstraints()
-        self.passwordTextField.layer.cornerRadius = 10
-        self.passwordTextField.setLeftPaddingWithIcon(amount: 10, iconSize: 25, iconSystemName: "lock", iconColor: .white)
-        self.passwordTextField.setPlaceholderWithColor(placeholder: "Password", color: .white)
-        self.passwordTextField.textColor = .white
+        self.passwordTextField.setup(leftIcon: Icons.lock, placeholder: "Password")
         self.passwordTextField.isSecureTextEntry = true
-        self.passwordTextField.backgroundColor = UIColor(white: 1, alpha: 0.15)
     }
     
     // MARK: SetupContinueButton

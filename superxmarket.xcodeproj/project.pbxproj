@@ -37,7 +37,7 @@
 		1BC829AB25BF834200488C88 /* LoginViewControllerConstraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BC829AA25BF834200488C88 /* LoginViewControllerConstraints.swift */; };
 		1BC829B325BF836D00488C88 /* LoginViewControllerCustomButtonDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BC829B225BF836D00488C88 /* LoginViewControllerCustomButtonDelegate.swift */; };
 		1BC829BA25BF8B8600488C88 /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BC829B925BF8B8600488C88 /* UIViewExtension.swift */; };
-		1BD1314925C0AC14002CA357 /* CustomViewForTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BD1314825C0AC14002CA357 /* CustomViewForTextField.swift */; };
+		1BD1314925C0AC14002CA357 /* LoginTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BD1314825C0AC14002CA357 /* LoginTextField.swift */; };
 		1BD8812A25D587360080FBFC /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BD8812925D587360080FBFC /* SignUpViewController.swift */; };
 		1BD8812F25D58A610080FBFC /* Signup.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1BD8812E25D58A610080FBFC /* Signup.storyboard */; };
 		2AE9C997EB552D7016F605EE /* Pods_superxmarket_superxmarketUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C5EAD36ADFCBE9565E65BC96 /* Pods_superxmarket_superxmarketUITests.framework */; };
@@ -98,7 +98,7 @@
 		1BC829AA25BF834200488C88 /* LoginViewControllerConstraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewControllerConstraints.swift; sourceTree = "<group>"; };
 		1BC829B225BF836D00488C88 /* LoginViewControllerCustomButtonDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewControllerCustomButtonDelegate.swift; sourceTree = "<group>"; };
 		1BC829B925BF8B8600488C88 /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
-		1BD1314825C0AC14002CA357 /* CustomViewForTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomViewForTextField.swift; sourceTree = "<group>"; };
+		1BD1314825C0AC14002CA357 /* LoginTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginTextField.swift; sourceTree = "<group>"; };
 		1BD8812925D587360080FBFC /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		1BD8812E25D58A610080FBFC /* Signup.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Signup.storyboard; sourceTree = "<group>"; };
 		28C10FB0A270062068D54CD4 /* Pods-superxmarketTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-superxmarketTests.release.xcconfig"; path = "Target Support Files/Pods-superxmarketTests/Pods-superxmarketTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -323,7 +323,7 @@
 		1BD1314725C0AC02002CA357 /* CustomTextField */ = {
 			isa = PBXGroup;
 			children = (
-				1BD1314825C0AC14002CA357 /* CustomViewForTextField.swift */,
+				1BD1314825C0AC14002CA357 /* LoginTextField.swift */,
 			);
 			path = CustomTextField;
 			sourceTree = "<group>";
@@ -624,7 +624,7 @@
 				1B391E3725C0480D007AF561 /* CustomSignInButtonConstraints.swift in Sources */,
 				1B20DF2325BF3FE9009104DC /* CustomButtonDelegate.swift in Sources */,
 				1B839AEB25BEFB5D006342F4 /* SceneDelegate.swift in Sources */,
-				1BD1314925C0AC14002CA357 /* CustomViewForTextField.swift in Sources */,
+				1BD1314925C0AC14002CA357 /* LoginTextField.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
