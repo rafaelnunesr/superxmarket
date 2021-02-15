@@ -31,5 +31,7 @@ struct Colors {
     
     
     static let ligherTransparentWhite: UIColor = UIColor(white: 1, alpha: 0.15)
+    
+    static let backgroundGray: UIColor = UIColor(red: 0.96, green: 0.96, blue: 0.96, alpha: 1)
 
 }
