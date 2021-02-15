@@ -11,13 +11,13 @@ class SignUpViewController: UIViewController {
     
     let header: UIView = UIView()
     let profilePhoto: UIImageView = UIImageView()
-    let userNameTextField: CustomTextField = CustomTextField()
-    let emailTextField: CustomTextField = CustomTextField()
-    let phoneNumberTextField: CustomTextField = CustomTextField()
-    let birthdayTextField: CustomTextField = CustomTextField()
-    let addressTextField: CustomTextField = CustomTextField()
+    let userNameTextField: SignupTextField = SignupTextField()
+    let emailTextField: SignupTextField = SignupTextField()
+    let phoneNumberTextField: SignupTextField = SignupTextField()
+    let birthdayTextField: SignupTextField = SignupTextField()
+    let addressTextField: SignupTextField = SignupTextField()
     let checkbox: UIButton = UIButton()
-    let termsConditionsLabel: UILabel = UILabel()
+    let termsConditionsLabel: UIButton = UIButton()
     let signupButton: UIButton = UIButton()
 
     override func viewDidLoad() {
@@ -95,6 +95,10 @@ class SignUpViewController: UIViewController {
         addProfilePhotoConstraints()
         self.profilePhoto.backgroundColor = Colors.lightPurple
         self.profilePhoto.layer.cornerRadius = 75
+        
+        self.profilePhoto.image = UIImage(systemName: Icons.camera.rawValue)
+        self.profilePhoto.tintColor = .white
+        self.profilePhoto.contentMode = .scaleAspectFit
     }
     
     func addProfilePhotoConstraints() {
@@ -114,8 +118,6 @@ class SignUpViewController: UIViewController {
     private func setupUserNameTextField() {
         addUserNameTextFieldConstraints()
         self.userNameTextField.setup(icon: Icons.person, placeholder: "Full Name")
-        self.userNameTextField.backgroundColor = .white
-        self.userNameTextField.addShadowEffect()
     }
     
     func addUserNameTextFieldConstraints() {
@@ -133,7 +135,7 @@ class SignUpViewController: UIViewController {
     
     private func setupEmailTextField() {
         addEmailTextFieldConstraints()
-        //self.emailTextField.setup(iconName: "mail", placeholder: "Email Address")
+        self.emailTextField.setup(icon: Icons.envelope, placeholder: "Email")
     }
     
     func addEmailTextFieldConstraints() {
@@ -144,13 +146,14 @@ class SignUpViewController: UIViewController {
         constraints.append(emailTextField.topAnchor.constraint(equalTo: userNameTextField.bottomAnchor, constant: 16))
         constraints.append(emailTextField.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16))
         constraints.append(emailTextField.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -16))
+        constraints.append(emailTextField.heightAnchor.constraint(equalToConstant: 52))
         
         NSLayoutConstraint.activate(constraints)
     }
     
     private func setupPhoneNumber() {
         addPhoneNumberConstraints()
-        //self.phoneNumberTextField.setup(iconName: "phone", placeholder: "Phone Number")
+        self.phoneNumberTextField.setup(icon: Icons.phone, placeholder: "Phone Number")
     }
     
     func addPhoneNumberConstraints() {
@@ -161,13 +164,14 @@ class SignUpViewController: UIViewController {
         constraints.append(phoneNumberTextField.topAnchor.constraint(equalTo: emailTextField.bottomAnchor, constant: 16))
         constraints.append(phoneNumberTextField.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16))
         constraints.append(phoneNumberTextField.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -16))
+        constraints.append(phoneNumberTextField.heightAnchor.constraint(equalToConstant: 52))
         
         NSLayoutConstraint.activate(constraints)
     }
     
     private func setupBirthday() {
         addBirthdayConstraints()
-        //self.birthdayTextField.setup(iconName: "calendar", placeholder: "Birthday")
+        self.birthdayTextField.setup(icon: Icons.calendar, placeholder: "Birthday")
     }
     
     func addBirthdayConstraints() {
@@ -178,13 +182,14 @@ class SignUpViewController: UIViewController {
         constraints.append(birthdayTextField.topAnchor.constraint(equalTo: phoneNumberTextField.bottomAnchor, constant: 16))
         constraints.append(birthdayTextField.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16))
         constraints.append(birthdayTextField.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -16))
+        constraints.append(birthdayTextField.heightAnchor.constraint(equalToConstant: 52))
         
         NSLayoutConstraint.activate(constraints)
     }
 
     private func setupAddressTextField() {
         addAddressTextFieldConstraints()
-        //self.addressTextField.setup(iconName: "home", placeholder: "Address")
+        self.addressTextField.setup(icon: Icons.house, placeholder: "Address")
     }
     
     func addAddressTextFieldConstraints() {
@@ -195,6 +200,7 @@ class SignUpViewController: UIViewController {
         constraints.append(addressTextField.topAnchor.constraint(equalTo: birthdayTextField.bottomAnchor, constant: 16))
         constraints.append(addressTextField.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16))
         constraints.append(addressTextField.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -16))
+        constraints.append(addressTextField.heightAnchor.constraint(equalToConstant: 52))
         
         NSLayoutConstraint.activate(constraints)
     }
@@ -230,7 +236,16 @@ class SignUpViewController: UIViewController {
     private func setupTermsAndConditionsLabel() {
         addTermsAndConditionsLabelConstraints()
         
-        self.termsConditionsLabel.text = "I agree with terms and conditions"
+        self.termsConditionsLabel.setTitle("I agree with terms and conditions", for: .normal)
+        self.termsConditionsLabel.setTitleColor(Colors.mainPurple, for: .normal)
+        self.termsConditionsLabel.contentHorizontalAlignment = .left
+        
+        self.termsConditionsLabel.addTarget(self, action: #selector(termsTapped), for: .touchUpInside)
+    }
+    
+    @objc private func termsTapped() {
+        let vc = TermsConditionsViewController()
+        present(vc, animated: true)
     }
     
     func addTermsAndConditionsLabelConstraints() {
