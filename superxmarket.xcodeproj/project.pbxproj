@@ -3,16 +3,22 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		02D63E6AEAD492A0EE66E411 /* Pods_superxmarket.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06FE775AD9891892FB3CB722 /* Pods_superxmarket.framework */; };
 		1B03EA8925BF041700CB8399 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B03EA8825BF041700CB8399 /* LoginViewController.swift */; };
 		1B03EA9125BF042400CB8399 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1B03EA9025BF042400CB8399 /* Login.storyboard */; };
 		1B03EA9825BF048600CB8399 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B03EA9725BF048600CB8399 /* Colors.swift */; };
 		1B03EAA025BF322100CB8399 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B03EA9F25BF322100CB8399 /* CustomButton.swift */; };
+		1B14690B25D7252D00DBBA80 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B14690A25D7252D00DBBA80 /* CustomTextField.swift */; };
+		1B14691025D72E1000DBBA80 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 1B14690F25D72E1000DBBA80 /* .gitignore */; };
 		1B20DF1A25BF36A7009104DC /* CustomSignInButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B20DF1925BF36A7009104DC /* CustomSignInButton.swift */; };
 		1B20DF2325BF3FE9009104DC /* CustomButtonDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B20DF2225BF3FE9009104DC /* CustomButtonDelegate.swift */; };
+		1B391E3725C0480D007AF561 /* CustomSignInButtonConstraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B391E3625C0480D007AF561 /* CustomSignInButtonConstraints.swift */; };
+		1B391E3F25C04D1E007AF561 /* UITextFieldExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B391E3E25C04D1E007AF561 /* UITextFieldExtension.swift */; };
+		1B42629225C05B4C007288FC /* LoginViewControllerUITextFieldDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B42629125C05B4C007288FC /* LoginViewControllerUITextFieldDelegate.swift */; };
 		1B839AE925BEFB5D006342F4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B839AE825BEFB5D006342F4 /* AppDelegate.swift */; };
 		1B839AEB25BEFB5D006342F4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B839AEA25BEFB5D006342F4 /* SceneDelegate.swift */; };
 		1B839AED25BEFB5D006342F4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B839AEC25BEFB5D006342F4 /* ViewController.swift */; };
@@ -21,6 +27,24 @@
 		1B839AF525BEFB5E006342F4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1B839AF325BEFB5E006342F4 /* LaunchScreen.storyboard */; };
 		1B839B0025BEFB5E006342F4 /* superxmarketTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B839AFF25BEFB5E006342F4 /* superxmarketTests.swift */; };
 		1B839B0B25BEFB5E006342F4 /* superxmarketUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B839B0A25BEFB5E006342F4 /* superxmarketUITests.swift */; };
+		1B97079525D81545001291B2 /* Roboto-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1BAF536925D80BE2003514AA /* Roboto-Black.ttf */; };
+		1B97079925D81548001291B2 /* Roboto-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1BAF537025D80BE3003514AA /* Roboto-Bold.ttf */; };
+		1B97079D25D8154C001291B2 /* Roboto-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1BAF537425D80BE3003514AA /* Roboto-Light.ttf */; };
+		1B9707A125D8154F001291B2 /* Roboto-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1BAF536B25D80BE2003514AA /* Roboto-Medium.ttf */; };
+		1B9707A525D81551001291B2 /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1BAF536F25D80BE2003514AA /* Roboto-Regular.ttf */; };
+		1B9707A925D81554001291B2 /* Roboto-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1BAF537325D80BE3003514AA /* Roboto-Thin.ttf */; };
+		1BAA1A1825DA71FB0038F710 /* TermsConditionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BAA1A1725DA71FB0038F710 /* TermsConditionsViewController.swift */; };
+		1BAA1A1D25DA720B0038F710 /* TermsConditions.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1BAA1A1C25DA720B0038F710 /* TermsConditions.storyboard */; };
+		1BAF537925D80E8A003514AA /* UIFontExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BAF537825D80E8A003514AA /* UIFontExtension.swift */; };
+		1BB2A5F325DA668400985D02 /* SignupTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BB2A5F225DA668400985D02 /* SignupTextField.swift */; };
+		1BC829AB25BF834200488C88 /* LoginViewControllerConstraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BC829AA25BF834200488C88 /* LoginViewControllerConstraints.swift */; };
+		1BC829B325BF836D00488C88 /* LoginViewControllerCustomButtonDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BC829B225BF836D00488C88 /* LoginViewControllerCustomButtonDelegate.swift */; };
+		1BC829BA25BF8B8600488C88 /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BC829B925BF8B8600488C88 /* UIViewExtension.swift */; };
+		1BD1314925C0AC14002CA357 /* LoginTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BD1314825C0AC14002CA357 /* LoginTextField.swift */; };
+		1BD8812A25D587360080FBFC /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BD8812925D587360080FBFC /* SignUpViewController.swift */; };
+		1BD8812F25D58A610080FBFC /* Signup.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1BD8812E25D58A610080FBFC /* Signup.storyboard */; };
+		2AE9C997EB552D7016F605EE /* Pods_superxmarket_superxmarketUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C5EAD36ADFCBE9565E65BC96 /* Pods_superxmarket_superxmarketUITests.framework */; };
+		C6A3BE86624FFC3E5AA81DA2 /* Pods_superxmarketTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D27741273341A6D32CCF32A /* Pods_superxmarketTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,12 +65,18 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		06FE775AD9891892FB3CB722 /* Pods_superxmarket.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_superxmarket.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1B03EA8825BF041700CB8399 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		1B03EA9025BF042400CB8399 /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		1B03EA9725BF048600CB8399 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		1B03EA9F25BF322100CB8399 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
+		1B14690A25D7252D00DBBA80 /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
+		1B14690F25D72E1000DBBA80 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = SOURCE_ROOT; };
 		1B20DF1925BF36A7009104DC /* CustomSignInButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSignInButton.swift; sourceTree = "<group>"; };
 		1B20DF2225BF3FE9009104DC /* CustomButtonDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButtonDelegate.swift; sourceTree = "<group>"; };
+		1B391E3625C0480D007AF561 /* CustomSignInButtonConstraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSignInButtonConstraints.swift; sourceTree = "<group>"; };
+		1B391E3E25C04D1E007AF561 /* UITextFieldExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITextFieldExtension.swift; sourceTree = "<group>"; };
+		1B42629125C05B4C007288FC /* LoginViewControllerUITextFieldDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewControllerUITextFieldDelegate.swift; sourceTree = "<group>"; };
 		1B839AE525BEFB5D006342F4 /* superxmarket.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = superxmarket.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1B839AE825BEFB5D006342F4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1B839AEA25BEFB5D006342F4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -61,6 +91,30 @@
 		1B839B0625BEFB5E006342F4 /* superxmarketUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = superxmarketUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1B839B0A25BEFB5E006342F4 /* superxmarketUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = superxmarketUITests.swift; sourceTree = "<group>"; };
 		1B839B0C25BEFB5E006342F4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1BAA1A1725DA71FB0038F710 /* TermsConditionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermsConditionsViewController.swift; sourceTree = "<group>"; };
+		1BAA1A1C25DA720B0038F710 /* TermsConditions.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TermsConditions.storyboard; sourceTree = "<group>"; };
+		1BAF536925D80BE2003514AA /* Roboto-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Black.ttf"; sourceTree = "<group>"; };
+		1BAF536B25D80BE2003514AA /* Roboto-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Medium.ttf"; sourceTree = "<group>"; };
+		1BAF536F25D80BE2003514AA /* Roboto-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Regular.ttf"; sourceTree = "<group>"; };
+		1BAF537025D80BE3003514AA /* Roboto-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Bold.ttf"; sourceTree = "<group>"; };
+		1BAF537325D80BE3003514AA /* Roboto-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Thin.ttf"; sourceTree = "<group>"; };
+		1BAF537425D80BE3003514AA /* Roboto-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Light.ttf"; sourceTree = "<group>"; };
+		1BAF537825D80E8A003514AA /* UIFontExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIFontExtension.swift; sourceTree = "<group>"; };
+		1BB2A5F225DA668400985D02 /* SignupTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupTextField.swift; sourceTree = "<group>"; };
+		1BC829AA25BF834200488C88 /* LoginViewControllerConstraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewControllerConstraints.swift; sourceTree = "<group>"; };
+		1BC829B225BF836D00488C88 /* LoginViewControllerCustomButtonDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewControllerCustomButtonDelegate.swift; sourceTree = "<group>"; };
+		1BC829B925BF8B8600488C88 /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
+		1BD1314825C0AC14002CA357 /* LoginTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginTextField.swift; sourceTree = "<group>"; };
+		1BD8812925D587360080FBFC /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		1BD8812E25D58A610080FBFC /* Signup.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Signup.storyboard; sourceTree = "<group>"; };
+		28C10FB0A270062068D54CD4 /* Pods-superxmarketTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-superxmarketTests.release.xcconfig"; path = "Target Support Files/Pods-superxmarketTests/Pods-superxmarketTests.release.xcconfig"; sourceTree = "<group>"; };
+		2D27741273341A6D32CCF32A /* Pods_superxmarketTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_superxmarketTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5056BA4EBEA64224D0D9DBC7 /* Pods-superxmarket.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-superxmarket.release.xcconfig"; path = "Target Support Files/Pods-superxmarket/Pods-superxmarket.release.xcconfig"; sourceTree = "<group>"; };
+		603108191C1496FEFF6C4BF5 /* Pods-superxmarketTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-superxmarketTests.debug.xcconfig"; path = "Target Support Files/Pods-superxmarketTests/Pods-superxmarketTests.debug.xcconfig"; sourceTree = "<group>"; };
+		9257C9D93DDDFA57679521B1 /* Pods-superxmarket-superxmarketUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-superxmarket-superxmarketUITests.release.xcconfig"; path = "Target Support Files/Pods-superxmarket-superxmarketUITests/Pods-superxmarket-superxmarketUITests.release.xcconfig"; sourceTree = "<group>"; };
+		C5EAD36ADFCBE9565E65BC96 /* Pods_superxmarket_superxmarketUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_superxmarket_superxmarketUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C6B749E2EC704D46B9F685BA /* Pods-superxmarket.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-superxmarket.debug.xcconfig"; path = "Target Support Files/Pods-superxmarket/Pods-superxmarket.debug.xcconfig"; sourceTree = "<group>"; };
+		E5718DE91B5C703B1574FB4C /* Pods-superxmarket-superxmarketUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-superxmarket-superxmarketUITests.debug.xcconfig"; path = "Target Support Files/Pods-superxmarket-superxmarketUITests/Pods-superxmarket-superxmarketUITests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +122,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				02D63E6AEAD492A0EE66E411 /* Pods_superxmarket.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -75,6 +130,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C6A3BE86624FFC3E5AA81DA2 /* Pods_superxmarketTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -82,6 +138,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2AE9C997EB552D7016F605EE /* Pods_superxmarket_superxmarketUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -91,6 +148,9 @@
 		1B03EA8725BF03F000CB8399 /* Login */ = {
 			isa = PBXGroup;
 			children = (
+				1BD1314725C0AC02002CA357 /* CustomTextField */,
+				1B03EA9D25BF31EA00CB8399 /* CustomsButton */,
+				1BC829A925BF831500488C88 /* Extensions */,
 				1B03EA9C25BF31DA00CB8399 /* View */,
 			);
 			path = Login;
@@ -99,7 +159,9 @@
 		1B03EA9525BF045800CB8399 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				1BAF535F25D80BB7003514AA /* Fonts */,
 				1B03EA9625BF047000CB8399 /* Colors */,
+				1B839AE825BEFB5D006342F4 /* AppDelegate.swift */,
 				1B839AEA25BEFB5D006342F4 /* SceneDelegate.swift */,
 				1B839AF125BEFB5E006342F4 /* Assets.xcassets */,
 				1B839AF325BEFB5E006342F4 /* LaunchScreen.storyboard */,
@@ -118,8 +180,6 @@
 		1B03EA9C25BF31DA00CB8399 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				1B03EA9E25BF31F600CB8399 /* CustomTextField */,
-				1B03EA9D25BF31EA00CB8399 /* CustomsButton */,
 				1B03EA8825BF041700CB8399 /* LoginViewController.swift */,
 				1B03EA9025BF042400CB8399 /* Login.storyboard */,
 			);
@@ -129,6 +189,7 @@
 		1B03EA9D25BF31EA00CB8399 /* CustomsButton */ = {
 			isa = PBXGroup;
 			children = (
+				1B391E3525C0474D007AF561 /* Extension */,
 				1B20DF2125BF3FCE009104DC /* Protocols */,
 				1B03EA9F25BF322100CB8399 /* CustomButton.swift */,
 				1B20DF1925BF36A7009104DC /* CustomSignInButton.swift */,
@@ -136,11 +197,12 @@
 			path = CustomsButton;
 			sourceTree = "<group>";
 		};
-		1B03EA9E25BF31F600CB8399 /* CustomTextField */ = {
+		1B14690925D7250F00DBBA80 /* Custom Components */ = {
 			isa = PBXGroup;
 			children = (
+				1B14690A25D7252D00DBBA80 /* CustomTextField.swift */,
 			);
-			path = CustomTextField;
+			path = "Custom Components";
 			sourceTree = "<group>";
 		};
 		1B20DF2125BF3FCE009104DC /* Protocols */ = {
@@ -151,6 +213,14 @@
 			path = Protocols;
 			sourceTree = "<group>";
 		};
+		1B391E3525C0474D007AF561 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				1B391E3625C0480D007AF561 /* CustomSignInButtonConstraints.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
 		1B839ADC25BEFB5D006342F4 = {
 			isa = PBXGroup;
 			children = (
@@ -158,6 +228,8 @@
 				1B839AFE25BEFB5E006342F4 /* superxmarketTests */,
 				1B839B0925BEFB5E006342F4 /* superxmarketUITests */,
 				1B839AE625BEFB5D006342F4 /* Products */,
+				AA37E934D6184C099C0EB7ED /* Pods */,
+				34520AF63CD9C79EAD1FC4F8 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -174,12 +246,14 @@
 		1B839AE725BEFB5D006342F4 /* superxmarket */ = {
 			isa = PBXGroup;
 			children = (
+				1B14690925D7250F00DBBA80 /* Custom Components */,
+				1BC829B825BF8B6F00488C88 /* Extentions */,
 				1B03EA9525BF045800CB8399 /* Supporting Files */,
 				1B839B1B25BEFB8A006342F4 /* Screens */,
-				1B839AE825BEFB5D006342F4 /* AppDelegate.swift */,
 				1B839AEC25BEFB5D006342F4 /* ViewController.swift */,
 				1B839AEE25BEFB5D006342F4 /* Main.storyboard */,
 				1B839AF625BEFB5E006342F4 /* Info.plist */,
+				1B14690F25D72E1000DBBA80 /* .gitignore */,
 			);
 			path = superxmarket;
 			sourceTree = "<group>";
@@ -205,9 +279,110 @@
 		1B839B1B25BEFB8A006342F4 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				1BAA1A1625DA71DA0038F710 /* TermsConditions */,
+				1BD8812825D587040080FBFC /* SignUp */,
 				1B03EA8725BF03F000CB8399 /* Login */,
 			);
 			path = Screens;
+			sourceTree = "<group>";
+		};
+		1BAA1A1625DA71DA0038F710 /* TermsConditions */ = {
+			isa = PBXGroup;
+			children = (
+				1BAA1A1725DA71FB0038F710 /* TermsConditionsViewController.swift */,
+				1BAA1A1C25DA720B0038F710 /* TermsConditions.storyboard */,
+			);
+			path = TermsConditions;
+			sourceTree = "<group>";
+		};
+		1BAF535F25D80BB7003514AA /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				1BAF536825D80BD3003514AA /* Roboto */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		1BAF536825D80BD3003514AA /* Roboto */ = {
+			isa = PBXGroup;
+			children = (
+				1BAF536925D80BE2003514AA /* Roboto-Black.ttf */,
+				1BAF537025D80BE3003514AA /* Roboto-Bold.ttf */,
+				1BAF537425D80BE3003514AA /* Roboto-Light.ttf */,
+				1BAF536B25D80BE2003514AA /* Roboto-Medium.ttf */,
+				1BAF536F25D80BE2003514AA /* Roboto-Regular.ttf */,
+				1BAF537325D80BE3003514AA /* Roboto-Thin.ttf */,
+			);
+			path = Roboto;
+			sourceTree = "<group>";
+		};
+		1BB2A5F125DA666200985D02 /* CustomTextField */ = {
+			isa = PBXGroup;
+			children = (
+				1BB2A5F225DA668400985D02 /* SignupTextField.swift */,
+			);
+			path = CustomTextField;
+			sourceTree = "<group>";
+		};
+		1BC829A925BF831500488C88 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				1BC829AA25BF834200488C88 /* LoginViewControllerConstraints.swift */,
+				1BC829B225BF836D00488C88 /* LoginViewControllerCustomButtonDelegate.swift */,
+				1B42629125C05B4C007288FC /* LoginViewControllerUITextFieldDelegate.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		1BC829B825BF8B6F00488C88 /* Extentions */ = {
+			isa = PBXGroup;
+			children = (
+				1BC829B925BF8B8600488C88 /* UIViewExtension.swift */,
+				1B391E3E25C04D1E007AF561 /* UITextFieldExtension.swift */,
+				1BAF537825D80E8A003514AA /* UIFontExtension.swift */,
+			);
+			path = Extentions;
+			sourceTree = "<group>";
+		};
+		1BD1314725C0AC02002CA357 /* CustomTextField */ = {
+			isa = PBXGroup;
+			children = (
+				1BD1314825C0AC14002CA357 /* LoginTextField.swift */,
+			);
+			path = CustomTextField;
+			sourceTree = "<group>";
+		};
+		1BD8812825D587040080FBFC /* SignUp */ = {
+			isa = PBXGroup;
+			children = (
+				1BB2A5F125DA666200985D02 /* CustomTextField */,
+				1BD8812925D587360080FBFC /* SignUpViewController.swift */,
+				1BD8812E25D58A610080FBFC /* Signup.storyboard */,
+			);
+			path = SignUp;
+			sourceTree = "<group>";
+		};
+		34520AF63CD9C79EAD1FC4F8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				06FE775AD9891892FB3CB722 /* Pods_superxmarket.framework */,
+				C5EAD36ADFCBE9565E65BC96 /* Pods_superxmarket_superxmarketUITests.framework */,
+				2D27741273341A6D32CCF32A /* Pods_superxmarketTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		AA37E934D6184C099C0EB7ED /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C6B749E2EC704D46B9F685BA /* Pods-superxmarket.debug.xcconfig */,
+				5056BA4EBEA64224D0D9DBC7 /* Pods-superxmarket.release.xcconfig */,
+				E5718DE91B5C703B1574FB4C /* Pods-superxmarket-superxmarketUITests.debug.xcconfig */,
+				9257C9D93DDDFA57679521B1 /* Pods-superxmarket-superxmarketUITests.release.xcconfig */,
+				603108191C1496FEFF6C4BF5 /* Pods-superxmarketTests.debug.xcconfig */,
+				28C10FB0A270062068D54CD4 /* Pods-superxmarketTests.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -217,9 +392,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1B839B0F25BEFB5E006342F4 /* Build configuration list for PBXNativeTarget "superxmarket" */;
 			buildPhases = (
+				4B9839DDFF46471E1C9AC379 /* [CP] Check Pods Manifest.lock */,
 				1B839AE125BEFB5D006342F4 /* Sources */,
 				1B839AE225BEFB5D006342F4 /* Frameworks */,
 				1B839AE325BEFB5D006342F4 /* Resources */,
+				4806C5AEADAE8A6F1675AA8C /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -234,6 +411,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1B839B1225BEFB5E006342F4 /* Build configuration list for PBXNativeTarget "superxmarketTests" */;
 			buildPhases = (
+				3F417B1FA3B3A0D999A5FC20 /* [CP] Check Pods Manifest.lock */,
 				1B839AF725BEFB5E006342F4 /* Sources */,
 				1B839AF825BEFB5E006342F4 /* Frameworks */,
 				1B839AF925BEFB5E006342F4 /* Resources */,
@@ -252,9 +430,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1B839B1525BEFB5E006342F4 /* Build configuration list for PBXNativeTarget "superxmarketUITests" */;
 			buildPhases = (
+				0CCB5FAFFAF55D3A4C4EEE51 /* [CP] Check Pods Manifest.lock */,
 				1B839B0225BEFB5E006342F4 /* Sources */,
 				1B839B0325BEFB5E006342F4 /* Frameworks */,
 				1B839B0425BEFB5E006342F4 /* Resources */,
+				0C5B30DB0C1BAA0A871430B8 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -313,10 +493,19 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1B9707A125D8154F001291B2 /* Roboto-Medium.ttf in Resources */,
+				1B9707A525D81551001291B2 /* Roboto-Regular.ttf in Resources */,
 				1B03EA9125BF042400CB8399 /* Login.storyboard in Resources */,
 				1B839AF525BEFB5E006342F4 /* LaunchScreen.storyboard in Resources */,
+				1BAA1A1D25DA720B0038F710 /* TermsConditions.storyboard in Resources */,
 				1B839AF225BEFB5E006342F4 /* Assets.xcassets in Resources */,
+				1BD8812F25D58A610080FBFC /* Signup.storyboard in Resources */,
+				1B97079525D81545001291B2 /* Roboto-Black.ttf in Resources */,
+				1B14691025D72E1000DBBA80 /* .gitignore in Resources */,
+				1B9707A925D81554001291B2 /* Roboto-Thin.ttf in Resources */,
+				1B97079925D81548001291B2 /* Roboto-Bold.ttf in Resources */,
 				1B839AF025BEFB5D006342F4 /* Main.storyboard in Resources */,
+				1B97079D25D8154C001291B2 /* Roboto-Light.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -336,6 +525,109 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		0C5B30DB0C1BAA0A871430B8 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-superxmarket-superxmarketUITests/Pods-superxmarket-superxmarketUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-superxmarket-superxmarketUITests/Pods-superxmarket-superxmarketUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-superxmarket-superxmarketUITests/Pods-superxmarket-superxmarketUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		0CCB5FAFFAF55D3A4C4EEE51 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-superxmarket-superxmarketUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3F417B1FA3B3A0D999A5FC20 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-superxmarketTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4806C5AEADAE8A6F1675AA8C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-superxmarket/Pods-superxmarket-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-superxmarket/Pods-superxmarket-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-superxmarket/Pods-superxmarket-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4B9839DDFF46471E1C9AC379 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-superxmarket-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		1B839AE125BEFB5D006342F4 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -343,12 +635,24 @@
 			files = (
 				1B20DF1A25BF36A7009104DC /* CustomSignInButton.swift in Sources */,
 				1B03EA8925BF041700CB8399 /* LoginViewController.swift in Sources */,
+				1BC829BA25BF8B8600488C88 /* UIViewExtension.swift in Sources */,
+				1B42629225C05B4C007288FC /* LoginViewControllerUITextFieldDelegate.swift in Sources */,
+				1BC829B325BF836D00488C88 /* LoginViewControllerCustomButtonDelegate.swift in Sources */,
 				1B03EA9825BF048600CB8399 /* Colors.swift in Sources */,
+				1BAA1A1825DA71FB0038F710 /* TermsConditionsViewController.swift in Sources */,
 				1B03EAA025BF322100CB8399 /* CustomButton.swift in Sources */,
+				1BB2A5F325DA668400985D02 /* SignupTextField.swift in Sources */,
+				1BC829AB25BF834200488C88 /* LoginViewControllerConstraints.swift in Sources */,
+				1B14690B25D7252D00DBBA80 /* CustomTextField.swift in Sources */,
+				1BAF537925D80E8A003514AA /* UIFontExtension.swift in Sources */,
+				1B391E3F25C04D1E007AF561 /* UITextFieldExtension.swift in Sources */,
 				1B839AED25BEFB5D006342F4 /* ViewController.swift in Sources */,
+				1BD8812A25D587360080FBFC /* SignUpViewController.swift in Sources */,
 				1B839AE925BEFB5D006342F4 /* AppDelegate.swift in Sources */,
+				1B391E3725C0480D007AF561 /* CustomSignInButtonConstraints.swift in Sources */,
 				1B20DF2325BF3FE9009104DC /* CustomButtonDelegate.swift in Sources */,
 				1B839AEB25BEFB5D006342F4 /* SceneDelegate.swift in Sources */,
+				1BD1314925C0AC14002CA357 /* LoginTextField.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -521,6 +825,7 @@
 		};
 		1B839B1025BEFB5E006342F4 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C6B749E2EC704D46B9F685BA /* Pods-superxmarket.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -539,6 +844,7 @@
 		};
 		1B839B1125BEFB5E006342F4 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5056BA4EBEA64224D0D9DBC7 /* Pods-superxmarket.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -557,6 +863,7 @@
 		};
 		1B839B1325BEFB5E006342F4 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 603108191C1496FEFF6C4BF5 /* Pods-superxmarketTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -578,6 +885,7 @@
 		};
 		1B839B1425BEFB5E006342F4 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 28C10FB0A270062068D54CD4 /* Pods-superxmarketTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -599,6 +907,7 @@
 		};
 		1B839B1625BEFB5E006342F4 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E5718DE91B5C703B1574FB4C /* Pods-superxmarket-superxmarketUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -618,6 +927,7 @@
 		};
 		1B839B1725BEFB5E006342F4 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9257C9D93DDDFA57679521B1 /* Pods-superxmarket-superxmarketUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

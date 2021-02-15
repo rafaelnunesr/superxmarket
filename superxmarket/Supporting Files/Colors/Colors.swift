@@ -11,9 +11,11 @@ import UIKit
 struct Colors {
     
     // MARK: PURPLE
-    static let ligherPuple: UIColor = UIColor(red: 0.66, green: 0.50, blue: 0.90, alpha: 1.00)
-    static let mainPurple: UIColor = UIColor(red: 0.53, green: 0.32, blue: 0.88, alpha: 1.00)
-    static let darkerPuple: UIColor = UIColor(red: 0.38, green: 0.18, blue: 0.67, alpha: 1.00)
+    static let lighterPurple: UIColor = UIColor(red: 0.69, green: 0.60, blue: 0.95, alpha: 1.00)
+    static let lightPurple: UIColor = UIColor(red: 0.51, green: 0.36, blue: 0.92, alpha: 1.00)
+    static let mainPurple: UIColor = UIColor(red: 0.40, green: 0.22, blue: 0.91, alpha: 1.00)
+    static let darkPurple: UIColor = UIColor(red: 0.38, green: 0.18, blue: 0.67, alpha: 1.00)
+    static let darkerPurple: UIColor = UIColor(red: 0.18, green: 0.09, blue: 0.44, alpha: 1.00)
     
     // MARK: GREEN
     static let mainGreen: UIColor = UIColor(red: 0.40, green: 0.84, blue: 0.65, alpha: 1.00)
@@ -23,6 +25,11 @@ struct Colors {
     // MARK: RED
     static let mainRed: UIColor = UIColor(red: 0.88, green: 0.32, blue: 0.40, alpha: 1.00)
     static let ligherRed: UIColor = UIColor(red: 0.84, green: 0.45, blue: 0.50, alpha: 1.00)
-    static let darkerRed: UIColor = UIColor(red: 0.67, green: 0.22, blue: 0.28, alpha: 1.00)
+    static let darkRed: UIColor = UIColor(red: 0.67, green: 0.22, blue: 0.28, alpha: 1.00)
+    static let darkerRed: UIColor =
+        UIColor(red: 0.40, green: 0.11, blue: 0.04, alpha: 1.00)
     
+    
+    static let ligherTransparentWhite: UIColor = UIColor(white: 1, alpha: 0.15)
+
 }
