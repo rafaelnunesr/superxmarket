@@ -27,6 +27,8 @@
 		1B839AF525BEFB5E006342F4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1B839AF325BEFB5E006342F4 /* LaunchScreen.storyboard */; };
 		1B839B0025BEFB5E006342F4 /* superxmarketTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B839AFF25BEFB5E006342F4 /* superxmarketTests.swift */; };
 		1B839B0B25BEFB5E006342F4 /* superxmarketUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B839B0A25BEFB5E006342F4 /* superxmarketUITests.swift */; };
+		1B839C2925DC75230003286C /* CodeViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B839C2825DC75230003286C /* CodeViewProtocol.swift */; };
+		1B839C3525DC75FD0003286C /* LoginViewControllerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B839C3425DC75FD0003286C /* LoginViewControllerView.swift */; };
 		1B97079525D81545001291B2 /* Roboto-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1BAF536925D80BE2003514AA /* Roboto-Black.ttf */; };
 		1B97079925D81548001291B2 /* Roboto-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1BAF537025D80BE3003514AA /* Roboto-Bold.ttf */; };
 		1B97079D25D8154C001291B2 /* Roboto-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1BAF537425D80BE3003514AA /* Roboto-Light.ttf */; };
@@ -91,6 +93,8 @@
 		1B839B0625BEFB5E006342F4 /* superxmarketUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = superxmarketUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1B839B0A25BEFB5E006342F4 /* superxmarketUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = superxmarketUITests.swift; sourceTree = "<group>"; };
 		1B839B0C25BEFB5E006342F4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1B839C2825DC75230003286C /* CodeViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeViewProtocol.swift; sourceTree = "<group>"; };
+		1B839C3425DC75FD0003286C /* LoginViewControllerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewControllerView.swift; sourceTree = "<group>"; };
 		1BAA1A1725DA71FB0038F710 /* TermsConditionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermsConditionsViewController.swift; sourceTree = "<group>"; };
 		1BAA1A1C25DA720B0038F710 /* TermsConditions.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TermsConditions.storyboard; sourceTree = "<group>"; };
 		1BAF536925D80BE2003514AA /* Roboto-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Black.ttf"; sourceTree = "<group>"; };
@@ -148,6 +152,7 @@
 		1B03EA8725BF03F000CB8399 /* Login */ = {
 			isa = PBXGroup;
 			children = (
+				1B839C3325DC75D30003286C /* Controllers */,
 				1BD1314725C0AC02002CA357 /* CustomTextField */,
 				1B03EA9D25BF31EA00CB8399 /* CustomsButton */,
 				1BC829A925BF831500488C88 /* Extensions */,
@@ -180,8 +185,8 @@
 		1B03EA9C25BF31DA00CB8399 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				1B03EA8825BF041700CB8399 /* LoginViewController.swift */,
 				1B03EA9025BF042400CB8399 /* Login.storyboard */,
+				1B839C3425DC75FD0003286C /* LoginViewControllerView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -246,6 +251,7 @@
 		1B839AE725BEFB5D006342F4 /* superxmarket */ = {
 			isa = PBXGroup;
 			children = (
+				1B839C2725DC75150003286C /* Protocols */,
 				1B14690925D7250F00DBBA80 /* Custom Components */,
 				1BC829B825BF8B6F00488C88 /* Extentions */,
 				1B03EA9525BF045800CB8399 /* Supporting Files */,
@@ -284,6 +290,22 @@
 				1B03EA8725BF03F000CB8399 /* Login */,
 			);
 			path = Screens;
+			sourceTree = "<group>";
+		};
+		1B839C2725DC75150003286C /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				1B839C2825DC75230003286C /* CodeViewProtocol.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		1B839C3325DC75D30003286C /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				1B03EA8825BF041700CB8399 /* LoginViewController.swift */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 		1BAA1A1625DA71DA0038F710 /* TermsConditions */ = {
@@ -639,6 +661,8 @@
 				1B42629225C05B4C007288FC /* LoginViewControllerUITextFieldDelegate.swift in Sources */,
 				1BC829B325BF836D00488C88 /* LoginViewControllerCustomButtonDelegate.swift in Sources */,
 				1B03EA9825BF048600CB8399 /* Colors.swift in Sources */,
+				1B839C2925DC75230003286C /* CodeViewProtocol.swift in Sources */,
+				1B839C3525DC75FD0003286C /* LoginViewControllerView.swift in Sources */,
 				1BAA1A1825DA71FB0038F710 /* TermsConditionsViewController.swift in Sources */,
 				1B03EAA025BF322100CB8399 /* CustomButton.swift in Sources */,
 				1BB2A5F325DA668400985D02 /* SignupTextField.swift in Sources */,
