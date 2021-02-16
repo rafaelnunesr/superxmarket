@@ -9,7 +9,7 @@ import UIKit
 
 final class LoginViewControllerView: UIView {
     
-    // MARK:
+    // MARK: Components
     var superxLogo: UIImageView = UIImageView()
     var emailTextField: LoginTextField = LoginTextField()
     var passwordTextField: LoginTextField = LoginTextField()
@@ -20,12 +20,17 @@ final class LoginViewControllerView: UIView {
     var googleButton: CustomSignInButton = CustomSignInButton()
     var facebookButton: CustomSignInButton = CustomSignInButton()
     var copyrightLabel: UILabel = UILabel()
+    
+    // MARK: Variables
+    let viewPadding: CGFloat = 20
  
     // MARK:
-    override init(frame: CGRect) {
+    override init(frame: CGRect = .zero) {
         super.init(frame: frame)
         self.setupGradientBackgroundColor()
-        self.setupDelegates()
+        self.buildViewHierarchy()
+        self.setupConstraints()
+        self.setupAditionalConfiguration()
     }
     
     // MARK:
@@ -42,20 +47,12 @@ final class LoginViewControllerView: UIView {
         
         self.applyGradient(colors: gradientBackground, locations: location, startPoint: starPoint, endPoint: endPoint, indexLayer: 0)
     }
-    
-    private func setupDelegates() {
-//        self.emailTextField.delegate = self
-//        self.passwordTextField.delegate = self
-//        self.continueButton.delegate = self
-//        self.googleButton.delegate = self
-//        self.facebookButton.delegate = self
-    }
-    
+        
 }
 
 extension LoginViewControllerView: CodeViewProtocol {
     
-    // MARK:
+    // MARK: BuildViewHierarchy
     func buildViewHierarchy() {
         self.addSubview(superxLogo)
         self.addSubview(emailTextField)
@@ -69,7 +66,7 @@ extension LoginViewControllerView: CodeViewProtocol {
         self.addSubview(copyrightLabel)
     }
     
-    // MARK:
+    // MARK: SetupConstraints
     func setupConstraints() {
         self.setupSuperxLogoConstraints()
         self.setupEmailTextFieldConstraints()
@@ -83,74 +80,68 @@ extension LoginViewControllerView: CodeViewProtocol {
         self.setupCopyrightLabelConstraints()
     }
     
-    // MARK:
+    // MARK: SetupAditionalConfiguration
     func setupAditionalConfiguration() {
         
     }
     
-    // MARK:
+    // MARK: SetupSuperxLogoConstraints
     private func setupSuperxLogoConstraints() {
-        superxLogo.translatesAutoresizingMaskIntoConstraints = false
         let logoSize: CGFloat = 230
         
+        superxLogo.translatesAutoresizingMaskIntoConstraints = false
         superxLogo.topAnchor.constraint(equalTo: self.safeAreaLayoutGuide.topAnchor, constant: 40).isActive = true
         superxLogo.centerXAnchor.constraint(equalTo: self.centerXAnchor).isActive = true
         superxLogo.widthAnchor.constraint(equalToConstant: logoSize).isActive = true
         superxLogo.heightAnchor.constraint(equalToConstant: logoSize).isActive = true
     }
     
-    // MARK:
+    // MARK: SetupEmailTextFieldConstraints
     private func setupEmailTextFieldConstraints() {
         emailTextField.translatesAutoresizingMaskIntoConstraints = false
-        
         emailTextField.topAnchor.constraint(equalTo: superxLogo.bottomAnchor, constant: 70).isActive = true
-        emailTextField.leadingAnchor.constraint(equalTo: self.safeAreaLayoutGuide.leadingAnchor, constant: 20).isActive = true
-        emailTextField.trailingAnchor.constraint(equalTo: self.safeAreaLayoutGuide.trailingAnchor, constant: -20).isActive = true
+        emailTextField.leadingAnchor.constraint(equalTo: self.safeAreaLayoutGuide.leadingAnchor, constant: self.viewPadding).isActive = true
+        emailTextField.trailingAnchor.constraint(equalTo: self.safeAreaLayoutGuide.trailingAnchor, constant: -self.viewPadding).isActive = true
         emailTextField.heightAnchor.constraint(equalToConstant: 52).isActive = true
     }
     
-    // MARK:
+    // MARK: SetupPasswordTextFieldConstraints
     private func setupPasswordTextFieldConstraints() {
         passwordTextField.translatesAutoresizingMaskIntoConstraints = false
-    
-        
         passwordTextField.topAnchor.constraint(equalTo: emailTextField.bottomAnchor, constant: 10).isActive = true
-        passwordTextField.leadingAnchor.constraint(equalTo: self.safeAreaLayoutGuide.leadingAnchor, constant: 20).isActive = true
-        passwordTextField.trailingAnchor.constraint(equalTo: self.safeAreaLayoutGuide.trailingAnchor, constant: -20).isActive = true
+        passwordTextField.leadingAnchor.constraint(equalTo: self.safeAreaLayoutGuide.leadingAnchor, constant: self.viewPadding).isActive = true
+        passwordTextField.trailingAnchor.constraint(equalTo: self.safeAreaLayoutGuide.trailingAnchor, constant: -self.viewPadding).isActive = true
         passwordTextField.heightAnchor.constraint(equalToConstant: 52).isActive = true
     }
     
-    // MARK:
+    // MARK: SetupContinueButtonConstraints
     private func setupContinueButtonConstraints() {
         continueButton.translatesAutoresizingMaskIntoConstraints = false
-        
         continueButton.topAnchor.constraint(equalTo: passwordTextField.bottomAnchor, constant: 15).isActive = true
-        continueButton.leadingAnchor.constraint(equalTo: self.safeAreaLayoutGuide.leadingAnchor, constant: 20).isActive = true
-        continueButton.trailingAnchor.constraint(equalTo: self.safeAreaLayoutGuide.trailingAnchor, constant: -20).isActive = true
+        continueButton.leadingAnchor.constraint(equalTo: self.safeAreaLayoutGuide.leadingAnchor, constant: self.viewPadding).isActive = true
+        continueButton.trailingAnchor.constraint(equalTo: self.safeAreaLayoutGuide.trailingAnchor, constant: -self.viewPadding).isActive = true
     }
     
-    // MARK:
+    // MARK: SetupRecoverPasswordButtonConstraints
     private func setupRecoverPasswordButtonConstraints() {
         recoverPasswordButton.translatesAutoresizingMaskIntoConstraints = false
-        
         recoverPasswordButton.topAnchor.constraint(equalTo: continueButton.bottomAnchor, constant: 12).isActive = true
-        recoverPasswordButton.leadingAnchor.constraint(equalTo: self.safeAreaLayoutGuide.leadingAnchor, constant: 20).isActive = true
+        recoverPasswordButton.leadingAnchor.constraint(equalTo: self.safeAreaLayoutGuide.leadingAnchor, constant: self.viewPadding).isActive = true
     }
     
-    // MARK:
+    // MARK: SetupSignupButtonConstraints
     private func setupSignupButtonConstraints() {
-        
         signupButton.translatesAutoresizingMaskIntoConstraints = false
        signupButton.topAnchor.constraint(equalTo: continueButton.bottomAnchor, constant: 12).isActive = true
-        signupButton.trailingAnchor.constraint(equalTo: self.safeAreaLayoutGuide.trailingAnchor, constant: -20).isActive = true
+        signupButton.trailingAnchor.constraint(equalTo: self.safeAreaLayoutGuide.trailingAnchor, constant: -self.viewPadding).isActive = true
     }
     
     // MARK:
     private func setupLineViewConstraints() {
         lineView.translatesAutoresizingMaskIntoConstraints = false
        lineView.topAnchor.constraint(equalTo: signupButton.bottomAnchor, constant: 20).isActive = true
-        lineView.leadingAnchor.constraint(equalTo: self.safeAreaLayoutGuide.leadingAnchor, constant: 20).isActive = true
-        lineView.trailingAnchor.constraint(equalTo: self.safeAreaLayoutGuide.trailingAnchor, constant: -20).isActive = true
+        lineView.leadingAnchor.constraint(equalTo: self.safeAreaLayoutGuide.leadingAnchor, constant: self.viewPadding).isActive = true
+        lineView.trailingAnchor.constraint(equalTo: self.safeAreaLayoutGuide.trailingAnchor, constant: -self.viewPadding).isActive = true
         lineView.heightAnchor.constraint(equalToConstant: 0.7).isActive = true
     }
     
@@ -159,16 +150,16 @@ extension LoginViewControllerView: CodeViewProtocol {
         googleButton.translatesAutoresizingMaskIntoConstraints = false
         
         googleButton.topAnchor.constraint(equalTo: lineView.bottomAnchor, constant: 20).isActive = true
-        googleButton.leadingAnchor.constraint(equalTo: self.safeAreaLayoutGuide.leadingAnchor, constant: 20).isActive = true
-        googleButton.trailingAnchor.constraint(equalTo: self.safeAreaLayoutGuide.trailingAnchor, constant: -20).isActive = true
+        googleButton.leadingAnchor.constraint(equalTo: self.safeAreaLayoutGuide.leadingAnchor, constant: self.viewPadding).isActive = true
+        googleButton.trailingAnchor.constraint(equalTo: self.safeAreaLayoutGuide.trailingAnchor, constant: -self.viewPadding).isActive = true
     }
     
     // MARK:
     private func setupFacebookConstraints() {
         facebookButton.translatesAutoresizingMaskIntoConstraints = false
         facebookButton.topAnchor.constraint(equalTo: googleButton.bottomAnchor, constant: 10).isActive = true
-        facebookButton.leadingAnchor.constraint(equalTo: self.safeAreaLayoutGuide.leadingAnchor, constant: 20).isActive = true
-        facebookButton.trailingAnchor.constraint(equalTo: self.safeAreaLayoutGuide.trailingAnchor, constant: -20).isActive = true
+        facebookButton.leadingAnchor.constraint(equalTo: self.safeAreaLayoutGuide.leadingAnchor, constant: self.viewPadding).isActive = true
+        facebookButton.trailingAnchor.constraint(equalTo: self.safeAreaLayoutGuide.trailingAnchor, constant: -self.viewPadding).isActive = true
     }
     
     // MARK: 
