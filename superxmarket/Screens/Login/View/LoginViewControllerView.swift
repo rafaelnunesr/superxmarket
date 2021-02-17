@@ -24,7 +24,7 @@ final class LoginViewControllerView: UIView {
     // MARK: Variables
     let viewPadding: CGFloat = 20
  
-    // MARK:
+    // MARK: Init
     override init(frame: CGRect = .zero) {
         super.init(frame: frame)
         self.setupGradientBackgroundColor()
