@@ -9,24 +9,14 @@ import UIKit
 
 class LoginViewController: UIViewController {
     
-    // MARK: Components
-    var superxLogo: UIImageView = UIImageView()
-    var emailTextField: LoginTextField = LoginTextField()
-    var passwordTextField: LoginTextField = LoginTextField()
-    var continueButton: CustomButton = CustomButton()
-    var recoverPasswordButton: CustomButton = CustomButton()
-    var signupButton: CustomButton = CustomButton()
-    var lineView: UIView = UIView()
-    var googleButton: CustomSignInButton = CustomSignInButton()
-    var facebookButton: CustomSignInButton = CustomSignInButton()
-    var copyrightLabel: UILabel = UILabel()
+    let loginView = LoginViewControllerView()
     
     // MARK: ViewDidLoad
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.setup()
-        
+        self.view = loginView
         navigationController?.isNavigationBarHidden = true
+        self.setup()
     }
     
     // MARK: StatusBarStyle
@@ -34,116 +24,80 @@ class LoginViewController: UIViewController {
         return .lightContent
     }
     
-    // MARK: Setup
     private func setup() {
-        self.addSubviews()
-        self.setupDelegates()
-        self.setupBackgroundView()
         self.setupComponents()
+        self.setupDelegates()
     }
     
-    // MARK: AddSubviews
-    private func addSubviews() {
-        self.view.addSubview(self.superxLogo)
-        self.view.addSubview(self.emailTextField)
-        self.view.addSubview(self.passwordTextField)
-        self.view.addSubview(self.continueButton)
-        self.view.addSubview(self.recoverPasswordButton)
-        self.view.addSubview(self.signupButton)
-        self.view.addSubview(self.lineView)
-        self.view.addSubview(self.googleButton)
-        self.view.addSubview(self.facebookButton)
-        self.view.addSubview(self.copyrightLabel)
-    }
-    
-    // MARK: SetupDelegates
-    private func setupDelegates() {
-        self.emailTextField.delegate = self
-        self.passwordTextField.delegate = self
-        self.continueButton.delegate = self
-        self.googleButton.delegate = self
-        self.facebookButton.delegate = self
-    }
-    
-    // MARK: SetupView
-    private func setupBackgroundView() {
-        
-        let gradientBackground: [UIColor] = [Colors.lighterPurple, Colors.lightPurple, Colors.mainPurple, Colors.mainPurple, Colors.mainPurple]
-        let location: [NSNumber] = [0, 0.25]
-        let starPoint: CGPoint = CGPoint(x: 0.1, y: 1)
-        let endPoint: CGPoint = CGPoint(x: 0.1, y: 0.1)
-        
-        self.view.applyGradient(colors: gradientBackground, locations: location, startPoint: starPoint, endPoint: endPoint, indexLayer: 0)
-    }
-    
-    
-    // MARK: SetupComponents
     private func setupComponents() {
         self.setupSuperxLogo()
         self.setupEmailTextField()
         self.setupPasswordTextField()
+        self.setupPasswordTextField()
         self.setupContinueButton()
-        self.setupGoogleButton()
-        self.setupFacebookButton()
         self.setupRecoverPasswordButton()
         self.setupSignupButton()
         self.setupLineView()
+        self.setupGoogleButton()
+        self.setupFacebookButton()
         self.setupCopyrightLabel()
+    }
+    
+    private func setupDelegates() {
+        self.loginView.emailTextField.delegate = self
+        self.loginView.passwordTextField.delegate = self
+        self.loginView.continueButton.delegate = self
+        self.loginView.googleButton.delegate = self
+        self.loginView.facebookButton.delegate = self
     }
     
     // MARK: SetupSuperxLogo
     private func setupSuperxLogo() {
-        setupSuperxLogoConstraints()
-        self.superxLogo.image = UIImage(named: "logo")
-        self.superxLogo.layer.masksToBounds = true
-        self.superxLogo.contentMode = .scaleAspectFit
+        self.loginView.superxLogo.image = UIImage(named: "logo")
+        self.loginView.superxLogo.layer.masksToBounds = true
+        self.loginView.superxLogo.contentMode = .scaleAspectFit
     }
     
     // MARK: SetupEmailTextField
     private func setupEmailTextField() {
-        setupEmailTextFieldConstraints()
-        self.emailTextField.setup(icon: Icons.person, placeholder: "Email")
-        self.emailTextField.keyboardType = .emailAddress
-        self.emailTextField.autocapitalizationType = .none
+        self.loginView.emailTextField.setup(icon: Icons.person, placeholder: "Email")
+        self.loginView.emailTextField.keyboardType = .emailAddress
+        self.loginView.emailTextField.autocapitalizationType = .none
     }
     
     // MARK: SetupPasswordTextField
     private func setupPasswordTextField() {
-        setupPasswordTextFieldConstraints()
-        self.passwordTextField.setup(icon: Icons.lock, placeholder: "Password")
-        self.passwordTextField.isSecureTextEntry = true
+        self.loginView.passwordTextField.setup(icon: Icons.lock, placeholder: "Password")
+        self.loginView.passwordTextField.isSecureTextEntry = true
     }
     
     // MARK: SetupContinueButton
     private func setupContinueButton() {
-        self.continueButton.setup()
-        setupContinueButtonConstraints()
-        self.continueButton.setTitle("Sign In", for: .normal)
-        self.continueButton.backgroundColor = Colors.darkerPurple.withAlphaComponent(0.65)
-        self.continueButton.titleLabel?.font = UIFont.robotoMedium(size: 18)
+        self.loginView.continueButton.setup()
+        self.loginView.continueButton.setTitle("Sign In", for: .normal)
+        self.loginView.continueButton.backgroundColor = Colors.darkerPurple.withAlphaComponent(0.65)
+        self.loginView.continueButton.titleLabel?.font = UIFont.robotoMedium(size: 18)
     }
     
     // MARK: SetupRecoverPasswordButton
     private func setupRecoverPasswordButton() {
-        self.recoverPasswordButton.setup(width: 160, height: 20, cornerRadius: nil)
-        setupRecoverPasswordButtonConstraints()
-        self.recoverPasswordButton.setTitle("Forgot Password", for: .normal)
-        self.recoverPasswordButton.contentHorizontalAlignment = UIControl.ContentHorizontalAlignment.left
-        self.recoverPasswordButton.setTitleColor(.white, for: .normal)
-        self.recoverPasswordButton.titleLabel?.font = UIFont.robotoMedium(size: 15)
+        self.loginView.recoverPasswordButton.setup(width: 160, height: 20, cornerRadius: nil)
+        self.loginView.recoverPasswordButton.setTitle("Forgot Password", for: .normal)
+        self.loginView.recoverPasswordButton.contentHorizontalAlignment = UIControl.ContentHorizontalAlignment.left
+        self.loginView.recoverPasswordButton.setTitleColor(.white, for: .normal)
+        self.loginView.recoverPasswordButton.titleLabel?.font = UIFont.robotoMedium(size: 15)
 
     }
     
     // MARK: SetupSignupButton
     private func setupSignupButton() {
-        self.signupButton.setup(width: 160, height: 20, cornerRadius: nil)
-        setupSignupButtonConstraints()
-        self.signupButton.titleLabel?.font = UIFont.robotoMedium(size: 15)
-        self.signupButton.setTitle("Sign Up", for: .normal)
-        self.signupButton.contentHorizontalAlignment = UIControl.ContentHorizontalAlignment.right
-        self.signupButton.setTitleColor(.white, for: .normal)
+        self.loginView.signupButton.setup(width: 160, height: 20, cornerRadius: nil)
+        self.loginView.signupButton.titleLabel?.font = UIFont.robotoMedium(size: 15)
+        self.loginView.signupButton.setTitle("Sign Up", for: .normal)
+        self.loginView.signupButton.contentHorizontalAlignment = UIControl.ContentHorizontalAlignment.right
+        self.loginView.signupButton.setTitleColor(.white, for: .normal)
     
-        self.signupButton.addTarget(self, action: #selector(signupTapped), for: .touchUpInside)
+        self.loginView.signupButton.addTarget(self, action: #selector(signupTapped), for: .touchUpInside)
     }
     
     @objc private func signupTapped() {
@@ -154,29 +108,25 @@ class LoginViewController: UIViewController {
     
     // MARK: SetupLineView
     private func setupLineView() {
-        setupLineViewConstraints()
-        self.lineView.backgroundColor = .white
+        self.loginView.lineView.backgroundColor = .white
     }
     
     // MARK: SetupGoogleButton
     private func setupGoogleButton() {
-        setupGoogleButtonConstraints()
-        self.googleButton.setup(companyLogoName: CompaniesLogo.google, titleForButton: SignInButtonTitle.google)
+        self.loginView.googleButton.setup(companyLogoName: CompaniesLogo.google, titleForButton: SignInButtonTitle.google)
     }
     
     // MARK: SetupFacebookButton
     private func setupFacebookButton() {
-        setupFacebookButtonConstraints()
-        self.facebookButton.setup(companyLogoName: CompaniesLogo.facebook, titleForButton: SignInButtonTitle.facebook)
+        self.loginView.facebookButton.setup(companyLogoName: CompaniesLogo.facebook, titleForButton: SignInButtonTitle.facebook)
     }
     
     // MARK: SetupCopyrightLabel
     private func setupCopyrightLabel() {
-        setupCopyrightLabelConstraints()
-        self.copyrightLabel.text = "Copyright © 2021 Superxmarket. All rights reserved."
-        self.copyrightLabel.textColor = .white
-        self.copyrightLabel.textAlignment = .center
-        self.copyrightLabel.font = UIFont.robotoRegular(size: 13)
+        self.loginView.copyrightLabel.text = "Copyright © 2021 Superxmarket. All rights reserved."
+        self.loginView.copyrightLabel.textColor = .white
+        self.loginView.copyrightLabel.textAlignment = .center
+        self.loginView.copyrightLabel.font = UIFont.robotoRegular(size: 13)
     }
     
 }
