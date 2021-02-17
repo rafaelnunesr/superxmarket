@@ -35,11 +35,12 @@
 		1B9707A125D8154F001291B2 /* Roboto-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1BAF536B25D80BE2003514AA /* Roboto-Medium.ttf */; };
 		1B9707A525D81551001291B2 /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1BAF536F25D80BE2003514AA /* Roboto-Regular.ttf */; };
 		1B9707A925D81554001291B2 /* Roboto-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1BAF537325D80BE3003514AA /* Roboto-Thin.ttf */; };
+		1BAA021B25DC9ADA00F81F5F /* LoginViewControllerViewCodeViewProtocolExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BAA021A25DC9ADA00F81F5F /* LoginViewControllerViewCodeViewProtocolExtension.swift */; };
+		1BAA022025DC9B3900F81F5F /* LoginViewControllerViewConstraintsExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BAA021F25DC9B3900F81F5F /* LoginViewControllerViewConstraintsExtension.swift */; };
 		1BAA1A1825DA71FB0038F710 /* TermsConditionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BAA1A1725DA71FB0038F710 /* TermsConditionsViewController.swift */; };
 		1BAA1A1D25DA720B0038F710 /* TermsConditions.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1BAA1A1C25DA720B0038F710 /* TermsConditions.storyboard */; };
 		1BAF537925D80E8A003514AA /* UIFontExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BAF537825D80E8A003514AA /* UIFontExtension.swift */; };
 		1BB2A5F325DA668400985D02 /* SignupTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BB2A5F225DA668400985D02 /* SignupTextField.swift */; };
-		1BC829AB25BF834200488C88 /* LoginViewControllerConstraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BC829AA25BF834200488C88 /* LoginViewControllerConstraints.swift */; };
 		1BC829B325BF836D00488C88 /* LoginViewControllerCustomButtonDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BC829B225BF836D00488C88 /* LoginViewControllerCustomButtonDelegate.swift */; };
 		1BC829BA25BF8B8600488C88 /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BC829B925BF8B8600488C88 /* UIViewExtension.swift */; };
 		1BD1314925C0AC14002CA357 /* LoginTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BD1314825C0AC14002CA357 /* LoginTextField.swift */; };
@@ -95,6 +96,8 @@
 		1B839B0C25BEFB5E006342F4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1B839C2825DC75230003286C /* CodeViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeViewProtocol.swift; sourceTree = "<group>"; };
 		1B839C3425DC75FD0003286C /* LoginViewControllerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewControllerView.swift; sourceTree = "<group>"; };
+		1BAA021A25DC9ADA00F81F5F /* LoginViewControllerViewCodeViewProtocolExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewControllerViewCodeViewProtocolExtension.swift; sourceTree = "<group>"; };
+		1BAA021F25DC9B3900F81F5F /* LoginViewControllerViewConstraintsExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewControllerViewConstraintsExtension.swift; sourceTree = "<group>"; };
 		1BAA1A1725DA71FB0038F710 /* TermsConditionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermsConditionsViewController.swift; sourceTree = "<group>"; };
 		1BAA1A1C25DA720B0038F710 /* TermsConditions.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TermsConditions.storyboard; sourceTree = "<group>"; };
 		1BAF536925D80BE2003514AA /* Roboto-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Black.ttf"; sourceTree = "<group>"; };
@@ -105,7 +108,6 @@
 		1BAF537425D80BE3003514AA /* Roboto-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Light.ttf"; sourceTree = "<group>"; };
 		1BAF537825D80E8A003514AA /* UIFontExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIFontExtension.swift; sourceTree = "<group>"; };
 		1BB2A5F225DA668400985D02 /* SignupTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupTextField.swift; sourceTree = "<group>"; };
-		1BC829AA25BF834200488C88 /* LoginViewControllerConstraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewControllerConstraints.swift; sourceTree = "<group>"; };
 		1BC829B225BF836D00488C88 /* LoginViewControllerCustomButtonDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewControllerCustomButtonDelegate.swift; sourceTree = "<group>"; };
 		1BC829B925BF8B8600488C88 /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
 		1BD1314825C0AC14002CA357 /* LoginTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginTextField.swift; sourceTree = "<group>"; };
@@ -349,9 +351,10 @@
 		1BC829A925BF831500488C88 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				1BC829AA25BF834200488C88 /* LoginViewControllerConstraints.swift */,
 				1BC829B225BF836D00488C88 /* LoginViewControllerCustomButtonDelegate.swift */,
 				1B42629125C05B4C007288FC /* LoginViewControllerUITextFieldDelegate.swift */,
+				1BAA021A25DC9ADA00F81F5F /* LoginViewControllerViewCodeViewProtocolExtension.swift */,
+				1BAA021F25DC9B3900F81F5F /* LoginViewControllerViewConstraintsExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -662,11 +665,11 @@
 				1BC829B325BF836D00488C88 /* LoginViewControllerCustomButtonDelegate.swift in Sources */,
 				1B03EA9825BF048600CB8399 /* Colors.swift in Sources */,
 				1B839C2925DC75230003286C /* CodeViewProtocol.swift in Sources */,
+				1BAA021B25DC9ADA00F81F5F /* LoginViewControllerViewCodeViewProtocolExtension.swift in Sources */,
 				1B839C3525DC75FD0003286C /* LoginViewControllerView.swift in Sources */,
 				1BAA1A1825DA71FB0038F710 /* TermsConditionsViewController.swift in Sources */,
 				1B03EAA025BF322100CB8399 /* CustomButton.swift in Sources */,
 				1BB2A5F325DA668400985D02 /* SignupTextField.swift in Sources */,
-				1BC829AB25BF834200488C88 /* LoginViewControllerConstraints.swift in Sources */,
 				1B14690B25D7252D00DBBA80 /* CustomTextField.swift in Sources */,
 				1BAF537925D80E8A003514AA /* UIFontExtension.swift in Sources */,
 				1B391E3F25C04D1E007AF561 /* UITextFieldExtension.swift in Sources */,
@@ -674,6 +677,7 @@
 				1BD8812A25D587360080FBFC /* SignUpViewController.swift in Sources */,
 				1B839AE925BEFB5D006342F4 /* AppDelegate.swift in Sources */,
 				1B391E3725C0480D007AF561 /* CustomSignInButtonConstraints.swift in Sources */,
+				1BAA022025DC9B3900F81F5F /* LoginViewControllerViewConstraintsExtension.swift in Sources */,
 				1B20DF2325BF3FE9009104DC /* CustomButtonDelegate.swift in Sources */,
 				1B839AEB25BEFB5D006342F4 /* SceneDelegate.swift in Sources */,
 				1BD1314925C0AC14002CA357 /* LoginTextField.swift in Sources */,

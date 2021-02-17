@@ -85,14 +85,9 @@ class CustomTextField: UITextField {
     // MARK: SetIconImageViewConstraints
     func setIconImageViewConstraints() {
         self.iconImageView.translatesAutoresizingMaskIntoConstraints = false
-        
-        var constraints = [NSLayoutConstraint]()
-        
-        constraints.append(self.iconImageView.centerYAnchor.constraint(equalTo: self.centerYAnchor))
-        constraints.append(self.iconImageView.widthAnchor.constraint(equalToConstant: iconSize))
-        constraints.append(self.iconImageView.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 10))
-        
-        NSLayoutConstraint.activate(constraints)
+        self.iconImageView.centerYAnchor.constraint(equalTo: self.centerYAnchor).isActive = true
+        self.iconImageView.widthAnchor.constraint(equalToConstant: iconSize).isActive = true
+        self.iconImageView.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 10).isActive = true
     }
     
     // MARK: SetupPlaceholder

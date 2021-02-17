@@ -81,7 +81,9 @@ class LoginViewController: UIViewController {
     
     // MARK: SetupRecoverPasswordButton
     private func setupRecoverPasswordButton() {
-        self.loginView.recoverPasswordButton.setup(width: 160, height: 20, cornerRadius: nil)
+        self.loginView.recoverPasswordButton.height = 10
+        self.loginView.recoverPasswordButton.width = 160
+        self.loginView.recoverPasswordButton.setup()
         self.loginView.recoverPasswordButton.setTitle("Forgot Password", for: .normal)
         self.loginView.recoverPasswordButton.contentHorizontalAlignment = UIControl.ContentHorizontalAlignment.left
         self.loginView.recoverPasswordButton.setTitleColor(.white, for: .normal)
@@ -91,7 +93,9 @@ class LoginViewController: UIViewController {
     
     // MARK: SetupSignupButton
     private func setupSignupButton() {
-        self.loginView.signupButton.setup(width: 160, height: 20, cornerRadius: nil)
+        self.loginView.signupButton.height = 20
+        self.loginView.signupButton.width = 160
+        self.loginView.signupButton.setup()
         self.loginView.signupButton.titleLabel?.font = UIFont.robotoMedium(size: 15)
         self.loginView.signupButton.setTitle("Sign Up", for: .normal)
         self.loginView.signupButton.contentHorizontalAlignment = UIControl.ContentHorizontalAlignment.right
