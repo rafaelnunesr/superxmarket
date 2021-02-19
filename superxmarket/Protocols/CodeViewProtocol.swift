@@ -10,7 +10,6 @@ import Foundation
 protocol CodeViewProtocol {
     func buildViewHierarchy()
     func setupConstraints()
-    func setupAditionalConfiguration()
     func setupView()
 }
 
@@ -18,6 +17,5 @@ extension CodeViewProtocol {
     func setupView() {
         buildViewHierarchy()
         setupConstraints()
-        setupAditionalConfiguration()
     }
 }
