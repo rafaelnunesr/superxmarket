@@ -14,6 +14,8 @@
 		1B03EAA025BF322100CB8399 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B03EA9F25BF322100CB8399 /* CustomButton.swift */; };
 		1B14690B25D7252D00DBBA80 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B14690A25D7252D00DBBA80 /* CustomTextField.swift */; };
 		1B14691025D72E1000DBBA80 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 1B14690F25D72E1000DBBA80 /* .gitignore */; };
+		1B19B17725E007C3002C6748 /* TermsCondtionsViewControllerViewCodeViewProtocolExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B19B17625E007C3002C6748 /* TermsCondtionsViewControllerViewCodeViewProtocolExtension.swift */; };
+		1B19B17C25E00805002C6748 /* TermsConditionsViewControllerViewConstraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B19B17B25E00805002C6748 /* TermsConditionsViewControllerViewConstraints.swift */; };
 		1B20DF1A25BF36A7009104DC /* CustomSignInButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B20DF1925BF36A7009104DC /* CustomSignInButton.swift */; };
 		1B20DF2325BF3FE9009104DC /* CustomButtonDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B20DF2225BF3FE9009104DC /* CustomButtonDelegate.swift */; };
 		1B2CE61C25DF209F00512C5B /* SignUpViewControllerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B2CE61B25DF209F00512C5B /* SignUpViewControllerView.swift */; };
@@ -22,6 +24,7 @@
 		1B391E3725C0480D007AF561 /* CustomSignInButtonConstraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B391E3625C0480D007AF561 /* CustomSignInButtonConstraints.swift */; };
 		1B391E3F25C04D1E007AF561 /* UITextFieldExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B391E3E25C04D1E007AF561 /* UITextFieldExtension.swift */; };
 		1B42629225C05B4C007288FC /* LoginViewControllerUITextFieldDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B42629125C05B4C007288FC /* LoginViewControllerUITextFieldDelegate.swift */; };
+		1B4CB1C725DF39B100FB7C21 /* TermsCondtionsViewControllerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B4CB1C625DF39B100FB7C21 /* TermsCondtionsViewControllerView.swift */; };
 		1B839AE925BEFB5D006342F4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B839AE825BEFB5D006342F4 /* AppDelegate.swift */; };
 		1B839AEB25BEFB5D006342F4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B839AEA25BEFB5D006342F4 /* SceneDelegate.swift */; };
 		1B839AED25BEFB5D006342F4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B839AEC25BEFB5D006342F4 /* ViewController.swift */; };
@@ -78,6 +81,8 @@
 		1B03EA9F25BF322100CB8399 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 		1B14690A25D7252D00DBBA80 /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		1B14690F25D72E1000DBBA80 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = SOURCE_ROOT; };
+		1B19B17625E007C3002C6748 /* TermsCondtionsViewControllerViewCodeViewProtocolExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermsCondtionsViewControllerViewCodeViewProtocolExtension.swift; sourceTree = "<group>"; };
+		1B19B17B25E00805002C6748 /* TermsConditionsViewControllerViewConstraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermsConditionsViewControllerViewConstraints.swift; sourceTree = "<group>"; };
 		1B20DF1925BF36A7009104DC /* CustomSignInButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSignInButton.swift; sourceTree = "<group>"; };
 		1B20DF2225BF3FE9009104DC /* CustomButtonDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButtonDelegate.swift; sourceTree = "<group>"; };
 		1B2CE61B25DF209F00512C5B /* SignUpViewControllerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewControllerView.swift; sourceTree = "<group>"; };
@@ -86,6 +91,7 @@
 		1B391E3625C0480D007AF561 /* CustomSignInButtonConstraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSignInButtonConstraints.swift; sourceTree = "<group>"; };
 		1B391E3E25C04D1E007AF561 /* UITextFieldExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITextFieldExtension.swift; sourceTree = "<group>"; };
 		1B42629125C05B4C007288FC /* LoginViewControllerUITextFieldDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewControllerUITextFieldDelegate.swift; sourceTree = "<group>"; };
+		1B4CB1C625DF39B100FB7C21 /* TermsCondtionsViewControllerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermsCondtionsViewControllerView.swift; sourceTree = "<group>"; };
 		1B839AE525BEFB5D006342F4 /* superxmarket.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = superxmarket.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1B839AE825BEFB5D006342F4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1B839AEA25BEFB5D006342F4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -260,6 +266,32 @@
 			path = Extension;
 			sourceTree = "<group>";
 		};
+		1B4CB1C325DF396400FB7C21 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				1B4CB1C625DF39B100FB7C21 /* TermsCondtionsViewControllerView.swift */,
+				1BAA1A1C25DA720B0038F710 /* TermsConditions.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		1B4CB1C425DF396900FB7C21 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				1BAA1A1725DA71FB0038F710 /* TermsConditionsViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		1B4CB1C525DF396E00FB7C21 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				1B19B17625E007C3002C6748 /* TermsCondtionsViewControllerViewCodeViewProtocolExtension.swift */,
+				1B19B17B25E00805002C6748 /* TermsConditionsViewControllerViewConstraints.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		1B839ADC25BEFB5D006342F4 = {
 			isa = PBXGroup;
 			children = (
@@ -345,8 +377,9 @@
 		1BAA1A1625DA71DA0038F710 /* TermsConditions */ = {
 			isa = PBXGroup;
 			children = (
-				1BAA1A1725DA71FB0038F710 /* TermsConditionsViewController.swift */,
-				1BAA1A1C25DA720B0038F710 /* TermsConditions.storyboard */,
+				1B4CB1C525DF396E00FB7C21 /* Extensions */,
+				1B4CB1C425DF396900FB7C21 /* Controller */,
+				1B4CB1C325DF396400FB7C21 /* View */,
 			);
 			path = TermsConditions;
 			sourceTree = "<group>";
@@ -693,6 +726,7 @@
 			files = (
 				1B20DF1A25BF36A7009104DC /* CustomSignInButton.swift in Sources */,
 				1B03EA8925BF041700CB8399 /* LoginViewController.swift in Sources */,
+				1B19B17C25E00805002C6748 /* TermsConditionsViewControllerViewConstraints.swift in Sources */,
 				1BC829BA25BF8B8600488C88 /* UIViewExtension.swift in Sources */,
 				1B42629225C05B4C007288FC /* LoginViewControllerUITextFieldDelegate.swift in Sources */,
 				1BC829B325BF836D00488C88 /* LoginViewControllerCustomButtonDelegate.swift in Sources */,
@@ -710,11 +744,13 @@
 				1B2CE62A25DF347D00512C5B /* SignUpViewControllerViewConstraints.swift in Sources */,
 				1B839AED25BEFB5D006342F4 /* ViewController.swift in Sources */,
 				1BD8812A25D587360080FBFC /* SignUpViewController.swift in Sources */,
+				1B4CB1C725DF39B100FB7C21 /* TermsCondtionsViewControllerView.swift in Sources */,
 				1B2CE61C25DF209F00512C5B /* SignUpViewControllerView.swift in Sources */,
 				1B839AE925BEFB5D006342F4 /* AppDelegate.swift in Sources */,
 				1B391E3725C0480D007AF561 /* CustomSignInButtonConstraints.swift in Sources */,
 				1BAA022025DC9B3900F81F5F /* LoginViewControllerViewConstraintsExtension.swift in Sources */,
 				1B20DF2325BF3FE9009104DC /* CustomButtonDelegate.swift in Sources */,
+				1B19B17725E007C3002C6748 /* TermsCondtionsViewControllerViewCodeViewProtocolExtension.swift in Sources */,
 				1B839AEB25BEFB5D006342F4 /* SceneDelegate.swift in Sources */,
 				1BD1314925C0AC14002CA357 /* LoginTextField.swift in Sources */,
 			);
