@@ -55,6 +55,7 @@
 		1BEB944225E0139C00CFE57F /* Shop.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1BEB944125E0139C00CFE57F /* Shop.storyboard */; };
 		1BEB944725E013AC00CFE57F /* ShopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BEB944625E013AC00CFE57F /* ShopViewController.swift */; };
 		1BEB944C25E013F200CFE57F /* ShopViewControllerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BEB944B25E013F200CFE57F /* ShopViewControllerView.swift */; };
+		1BF2422525E46F3800FD863A /* productData.json in Resources */ = {isa = PBXBuildFile; fileRef = 1BF2422425E46F3800FD863A /* productData.json */; };
 		2AE9C997EB552D7016F605EE /* Pods_superxmarket_superxmarketUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C5EAD36ADFCBE9565E65BC96 /* Pods_superxmarket_superxmarketUITests.framework */; };
 		C6A3BE86624FFC3E5AA81DA2 /* Pods_superxmarketTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D27741273341A6D32CCF32A /* Pods_superxmarketTests.framework */; };
 /* End PBXBuildFile section */
@@ -131,6 +132,7 @@
 		1BEB944125E0139C00CFE57F /* Shop.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Shop.storyboard; sourceTree = "<group>"; };
 		1BEB944625E013AC00CFE57F /* ShopViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopViewController.swift; sourceTree = "<group>"; };
 		1BEB944B25E013F200CFE57F /* ShopViewControllerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopViewControllerView.swift; sourceTree = "<group>"; };
+		1BF2422425E46F3800FD863A /* productData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = productData.json; sourceTree = "<group>"; };
 		28C10FB0A270062068D54CD4 /* Pods-superxmarketTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-superxmarketTests.release.xcconfig"; path = "Target Support Files/Pods-superxmarketTests/Pods-superxmarketTests.release.xcconfig"; sourceTree = "<group>"; };
 		2D27741273341A6D32CCF32A /* Pods_superxmarketTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_superxmarketTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5056BA4EBEA64224D0D9DBC7 /* Pods-superxmarket.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-superxmarket.release.xcconfig"; path = "Target Support Files/Pods-superxmarket/Pods-superxmarket.release.xcconfig"; sourceTree = "<group>"; };
@@ -463,6 +465,7 @@
 		1BEB943D25E0136E00CFE57F /* Shop */ = {
 			isa = PBXGroup;
 			children = (
+				1BF2422325E46F2200FD863A /* Mock */,
 				1BEB944025E0138100CFE57F /* Controller */,
 				1BEB943F25E0137C00CFE57F /* View */,
 				1BEB943E25E0137500CFE57F /* Extensions */,
@@ -492,6 +495,14 @@
 				1BEB944625E013AC00CFE57F /* ShopViewController.swift */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		1BF2422325E46F2200FD863A /* Mock */ = {
+			isa = PBXGroup;
+			children = (
+				1BF2422425E46F3800FD863A /* productData.json */,
+			);
+			path = Mock;
 			sourceTree = "<group>";
 		};
 		34520AF63CD9C79EAD1FC4F8 /* Frameworks */ = {
@@ -637,6 +648,7 @@
 				1B14691025D72E1000DBBA80 /* .gitignore in Resources */,
 				1B9707A925D81554001291B2 /* Roboto-Thin.ttf in Resources */,
 				1B97079925D81548001291B2 /* Roboto-Bold.ttf in Resources */,
+				1BF2422525E46F3800FD863A /* productData.json in Resources */,
 				1B839AF025BEFB5D006342F4 /* Main.storyboard in Resources */,
 				1B97079D25D8154C001291B2 /* Roboto-Light.ttf in Resources */,
 			);
