@@ -72,19 +72,19 @@ class SignUpViewControllerView: UIView {
     private func setupUserNameTextField() {
         setupUserNameTextFieldCostraints()
     }
-    
+
     private func setupEmailTextField() {
         setupEmailTextFieldConstraints()
     }
-    
+
     private func setupPhoneNumberTextField() {
         setupPhoneNumberTextFieldConstraints()
     }
-    
+
     private func setupBirthdayTextField() {
         setupBirthdayTextFieldConstraints()
     }
-    
+
     private func setupAddressTextField() {
         setupAddressTextFieldConstraints()
     }

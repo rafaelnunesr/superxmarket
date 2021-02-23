@@ -77,6 +77,12 @@ class LoginViewController: UIViewController {
         self.loginView.continueButton.setTitle("Sign In", for: .normal)
         self.loginView.continueButton.backgroundColor = Colors.darkerPurple.withAlphaComponent(0.65)
         self.loginView.continueButton.titleLabel?.font = UIFont.robotoMedium(size: 18)
+        self.loginView.continueButton.addTarget(self, action: #selector(signinTapped), for: .touchUpInside)
+    }
+    
+    @objc private func signinTapped() {
+        let vc = ShopViewController()
+        navigationController?.pushViewController(vc, animated: true)
     }
     
     // MARK: SetupRecoverPasswordButton
