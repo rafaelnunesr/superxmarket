@@ -25,6 +25,7 @@
 		1B391E3F25C04D1E007AF561 /* UITextFieldExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B391E3E25C04D1E007AF561 /* UITextFieldExtension.swift */; };
 		1B42629225C05B4C007288FC /* LoginViewControllerUITextFieldDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B42629125C05B4C007288FC /* LoginViewControllerUITextFieldDelegate.swift */; };
 		1B4CB1C725DF39B100FB7C21 /* TermsCondtionsViewControllerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B4CB1C625DF39B100FB7C21 /* TermsCondtionsViewControllerView.swift */; };
+		1B770A5B25E5D0F80092F4EF /* ProductTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B770A5A25E5D0F80092F4EF /* ProductTableViewCell.swift */; };
 		1B839AE925BEFB5D006342F4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B839AE825BEFB5D006342F4 /* AppDelegate.swift */; };
 		1B839AEB25BEFB5D006342F4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B839AEA25BEFB5D006342F4 /* SceneDelegate.swift */; };
 		1B839AED25BEFB5D006342F4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B839AEC25BEFB5D006342F4 /* ViewController.swift */; };
@@ -96,6 +97,7 @@
 		1B391E3E25C04D1E007AF561 /* UITextFieldExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITextFieldExtension.swift; sourceTree = "<group>"; };
 		1B42629125C05B4C007288FC /* LoginViewControllerUITextFieldDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewControllerUITextFieldDelegate.swift; sourceTree = "<group>"; };
 		1B4CB1C625DF39B100FB7C21 /* TermsCondtionsViewControllerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermsCondtionsViewControllerView.swift; sourceTree = "<group>"; };
+		1B770A5A25E5D0F80092F4EF /* ProductTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductTableViewCell.swift; sourceTree = "<group>"; };
 		1B839AE525BEFB5D006342F4 /* superxmarket.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = superxmarket.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1B839AE825BEFB5D006342F4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1B839AEA25BEFB5D006342F4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -300,6 +302,22 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		1B770A4F25E5D09A0092F4EF /* Product */ = {
+			isa = PBXGroup;
+			children = (
+				1B770A5125E5D0AD0092F4EF /* Cell */,
+			);
+			path = Product;
+			sourceTree = "<group>";
+		};
+		1B770A5125E5D0AD0092F4EF /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				1B770A5A25E5D0F80092F4EF /* ProductTableViewCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
 		1B839ADC25BEFB5D006342F4 = {
 			isa = PBXGroup;
 			children = (
@@ -465,6 +483,7 @@
 		1BEB943D25E0136E00CFE57F /* Shop */ = {
 			isa = PBXGroup;
 			children = (
+				1B770A4F25E5D09A0092F4EF /* Product */,
 				1BF2422325E46F2200FD863A /* Mock */,
 				1BEB944025E0138100CFE57F /* Controller */,
 				1BEB943F25E0137C00CFE57F /* View */,
@@ -803,6 +822,7 @@
 				1B2CE61C25DF209F00512C5B /* SignUpViewControllerView.swift in Sources */,
 				1B839AE925BEFB5D006342F4 /* AppDelegate.swift in Sources */,
 				1B391E3725C0480D007AF561 /* CustomSignInButtonConstraints.swift in Sources */,
+				1B770A5B25E5D0F80092F4EF /* ProductTableViewCell.swift in Sources */,
 				1BAA022025DC9B3900F81F5F /* LoginViewControllerViewConstraintsExtension.swift in Sources */,
 				1B20DF2325BF3FE9009104DC /* CustomButtonDelegate.swift in Sources */,
 				1B19B17725E007C3002C6748 /* TermsCondtionsViewControllerViewCodeViewProtocolExtension.swift in Sources */,

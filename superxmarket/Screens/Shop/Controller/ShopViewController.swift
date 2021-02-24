@@ -16,4 +16,8 @@ class ShopViewController: UIViewController {
         self.view = shopView
     }
     
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
+    
 }

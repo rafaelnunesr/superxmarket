@@ -38,6 +38,9 @@ class ShopViewControllerView: UIView {
         self.setupCurrency()
         self.setupTotalValue()
         self.setupSearchField()
+        self.setupCameraIcon()
+        self.setupSearchIcon()
+        self.setupProductsTableView()
     }
     
     private func setupHeader() {
@@ -67,32 +70,67 @@ class ShopViewControllerView: UIView {
     
     private func setupSearchField() {
         
+        self.searchField.backgroundColor = .white
         self.searchField.font = UIFontMetrics.default.scaledFont(for: UIFont.robotoBold(size: 18))
         self.searchField.autocorrectionType = .no
         self.searchField.adjustsFontForContentSizeCategory = true
-        self.searchField.placeholder = "Type a product name"
-        self.searchField.layer.cornerRadius = 16
-        let paddingView = self.searchField.setPadding(amount: 10)
+        self.searchField.layer.cornerRadius = 10
+        let paddingView = self.searchField.setPadding(amount: 40)
         self.searchField.leftView = paddingView
         self.searchField.leftViewMode = UITextField.ViewMode.always
         
-        //self.searchField.setup(icon: Icons.camera, placeholder: "Type a product name")
+        self.searchField.attributedPlaceholder = NSAttributedString(string: "Type a product name", attributes: [
+            .foregroundColor: UIColor.gray,
+            .font: UIFont.robotoMedium(size: 17)
+        ])
+        
+        self.searchField.addShadowEffect()
+        
+    }
+    
+    private func setupCameraIcon() {
         
         self.cameraIcon.backgroundImage(for: .normal)
         
         let btnImage = UIImage(systemName: Icons.camera.rawValue)
         self.cameraIcon.setImage(btnImage , for: .normal)
+        self.cameraIcon.tintColor = Colors.mainPurple
         
-        self.cameraIcon.translatesAutoresizingMaskIntoConstraints = false
-        self.cameraIcon.centerYAnchor.constraint(equalTo: self.centerYAnchor).isActive = true
-        self.cameraIcon.widthAnchor.constraint(equalToConstant: 30).isActive = true
-        self.cameraIcon.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 10).isActive = true
-        
-        //self.setPlaceholderWithColor(placeholder: textFieldPlaceholder!, color: self.color)
+        self.cameraIcon.addTarget(self, action: #selector(cameraTapped), for: .touchUpInside)
     }
     
-
+    @objc private func cameraTapped() {
+        print("camera tapped")
+    }
+    
+    private func setupSearchIcon() {
+        self.searchIcon.backgroundImage(for: .normal)
+        
+        let btnImage = UIImage(systemName: Icons.magnifyingglass.rawValue)
+        self.searchIcon.setImage(btnImage , for: .normal)
+        self.searchIcon.tintColor = Colors.mainPurple
+        
+        self.searchIcon.addTarget(self, action: #selector(searchTapped), for: .touchUpInside)
+    }
+    
+    @objc private func searchTapped() {
+        print("search tapped")
+    }
+    
+    private func setupProductsTableView() {
+        self.productsTableView.register(ProductTableViewCell.nib(), forCellReuseIdentifier: ProductTableViewCell.identifier)
+        
+        self.productsTableView.delegate = self
+        
+        self.productsTableView.backgroundColor = .gray
+    }
+        
 }
+
+
+extension ShopViewControllerView: UITableViewDelegate {
+}
+
 
 extension ShopViewControllerView: CodeViewProtocol {
     func buildViewHierarchy() {
@@ -163,15 +201,33 @@ extension ShopViewControllerView {
     
     private func setupSearchFieldConstraints() {
         searchField.translatesAutoresizingMaskIntoConstraints = false
-        searchField.centerYAnchor.constraint(equalTo: topHeader.bottomAnchor, constant: -26).isActive = true
+        searchField.centerYAnchor.constraint(equalTo: topHeader.bottomAnchor).isActive = true
         searchField.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 26).isActive = true
         searchField.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -26).isActive = true
         searchField.heightAnchor.constraint(equalToConstant: 52).isActive = true
     }
     
-    private func setupCameraIconConstraints() {}
+    private func setupCameraIconConstraints() {
+        
+        self.cameraIcon.translatesAutoresizingMaskIntoConstraints = false
+        self.cameraIcon.centerYAnchor.constraint(equalTo: searchField.centerYAnchor).isActive = true
+        self.cameraIcon.widthAnchor.constraint(equalToConstant: 40).isActive = true
+        self.cameraIcon.leadingAnchor.constraint(equalTo: searchField.leadingAnchor, constant: 4).isActive = true
+    }
     
-    private func setupSearchIconConstraints() {}
+    private func setupSearchIconConstraints() {
+        
+        self.searchIcon.translatesAutoresizingMaskIntoConstraints = false
+        self.searchIcon.centerYAnchor.constraint(equalTo: searchField.centerYAnchor).isActive = true
+        self.searchIcon.widthAnchor.constraint(equalToConstant: 40).isActive = true
+        self.searchIcon.trailingAnchor.constraint(equalTo: searchField.trailingAnchor, constant: -4).isActive = true
+    }
     
-    private func setupProductsTableViewConstraints() {}
+    private func setupProductsTableViewConstraints() {
+        productsTableView.translatesAutoresizingMaskIntoConstraints = false
+        productsTableView.topAnchor.constraint(equalTo: topHeader.bottomAnchor, constant: 40).isActive = true
+        productsTableView.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 16).isActive = true
+        productsTableView.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -16).isActive = true
+        productsTableView.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -16).isActive = true
+    }
 }

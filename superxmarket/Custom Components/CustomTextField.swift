@@ -16,6 +16,7 @@ enum Icons: String {
     case calendar = "calendar"
     case house = "house.fill"
     case camera = "camera.fill"
+    case magnifyingglass = "magnifyingglass"
 }
 
 class CustomTextField: UITextField {
