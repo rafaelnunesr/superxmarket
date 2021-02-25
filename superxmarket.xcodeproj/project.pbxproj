@@ -12,6 +12,9 @@
 		1B03EA9125BF042400CB8399 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1B03EA9025BF042400CB8399 /* Login.storyboard */; };
 		1B03EA9825BF048600CB8399 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B03EA9725BF048600CB8399 /* Colors.swift */; };
 		1B03EAA025BF322100CB8399 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B03EA9F25BF322100CB8399 /* CustomButton.swift */; };
+		1B0BA52625E735B2001776C6 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B0BA52525E735B2001776C6 /* ListViewController.swift */; };
+		1B0BA52D25E735F1001776C6 /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B0BA52C25E735F1001776C6 /* HistoryViewController.swift */; };
+		1B0BA53725E73613001776C6 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B0BA53625E73613001776C6 /* ProfileViewController.swift */; };
 		1B14690B25D7252D00DBBA80 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B14690A25D7252D00DBBA80 /* CustomTextField.swift */; };
 		1B14691025D72E1000DBBA80 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 1B14690F25D72E1000DBBA80 /* .gitignore */; };
 		1B19B17725E007C3002C6748 /* TermsCondtionsViewControllerViewCodeViewProtocolExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B19B17625E007C3002C6748 /* TermsCondtionsViewControllerViewCodeViewProtocolExtension.swift */; };
@@ -84,6 +87,9 @@
 		1B03EA9025BF042400CB8399 /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		1B03EA9725BF048600CB8399 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		1B03EA9F25BF322100CB8399 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
+		1B0BA52525E735B2001776C6 /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
+		1B0BA52C25E735F1001776C6 /* HistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
+		1B0BA53625E73613001776C6 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		1B14690A25D7252D00DBBA80 /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		1B14690F25D72E1000DBBA80 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = SOURCE_ROOT; };
 		1B19B17625E007C3002C6748 /* TermsCondtionsViewControllerViewCodeViewProtocolExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermsCondtionsViewControllerViewCodeViewProtocolExtension.swift; sourceTree = "<group>"; };
@@ -224,6 +230,54 @@
 				1B20DF1925BF36A7009104DC /* CustomSignInButton.swift */,
 			);
 			path = CustomsButton;
+			sourceTree = "<group>";
+		};
+		1B0BA52025E73586001776C6 /* List */ = {
+			isa = PBXGroup;
+			children = (
+				1B0BA52125E7358E001776C6 /* Controller */,
+			);
+			path = List;
+			sourceTree = "<group>";
+		};
+		1B0BA52125E7358E001776C6 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				1B0BA52525E735B2001776C6 /* ListViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		1B0BA52A25E735DA001776C6 /* History */ = {
+			isa = PBXGroup;
+			children = (
+				1B0BA52B25E735E1001776C6 /* Controller */,
+			);
+			path = History;
+			sourceTree = "<group>";
+		};
+		1B0BA52B25E735E1001776C6 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				1B0BA52C25E735F1001776C6 /* HistoryViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		1B0BA53425E735FB001776C6 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				1B0BA53525E73604001776C6 /* Controller */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		1B0BA53525E73604001776C6 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				1B0BA53625E73613001776C6 /* ProfileViewController.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 		1B14690925D7250F00DBBA80 /* Custom Components */ = {
@@ -377,6 +431,9 @@
 		1B839B1B25BEFB8A006342F4 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				1B0BA53425E735FB001776C6 /* Profile */,
+				1B0BA52A25E735DA001776C6 /* History */,
+				1B0BA52025E73586001776C6 /* List */,
 				1BEB943D25E0136E00CFE57F /* Shop */,
 				1BAA1A1625DA71DA0038F710 /* TermsConditions */,
 				1BD8812825D587040080FBFC /* SignUp */,
@@ -802,6 +859,7 @@
 				1BEB944725E013AC00CFE57F /* ShopViewController.swift in Sources */,
 				1B19B17C25E00805002C6748 /* TermsConditionsViewControllerViewConstraints.swift in Sources */,
 				1BC829BA25BF8B8600488C88 /* UIViewExtension.swift in Sources */,
+				1B0BA52625E735B2001776C6 /* ListViewController.swift in Sources */,
 				1B42629225C05B4C007288FC /* LoginViewControllerUITextFieldDelegate.swift in Sources */,
 				1BC829B325BF836D00488C88 /* LoginViewControllerCustomButtonDelegate.swift in Sources */,
 				1B03EA9825BF048600CB8399 /* Colors.swift in Sources */,
@@ -811,6 +869,7 @@
 				1BAA1A1825DA71FB0038F710 /* TermsConditionsViewController.swift in Sources */,
 				1B03EAA025BF322100CB8399 /* CustomButton.swift in Sources */,
 				1B2CE62525DF341000512C5B /* SignUpViewControllerViewCodeViewProtocolExtension.swift in Sources */,
+				1B0BA52D25E735F1001776C6 /* HistoryViewController.swift in Sources */,
 				1BB2A5F325DA668400985D02 /* SignupTextField.swift in Sources */,
 				1B14690B25D7252D00DBBA80 /* CustomTextField.swift in Sources */,
 				1BAF537925D80E8A003514AA /* UIFontExtension.swift in Sources */,
@@ -827,6 +886,7 @@
 				1B20DF2325BF3FE9009104DC /* CustomButtonDelegate.swift in Sources */,
 				1B19B17725E007C3002C6748 /* TermsCondtionsViewControllerViewCodeViewProtocolExtension.swift in Sources */,
 				1B839AEB25BEFB5D006342F4 /* SceneDelegate.swift in Sources */,
+				1B0BA53725E73613001776C6 /* ProfileViewController.swift in Sources */,
 				1BD1314925C0AC14002CA357 /* LoginTextField.swift in Sources */,
 				1BEB944C25E013F200CFE57F /* ShopViewControllerView.swift in Sources */,
 			);

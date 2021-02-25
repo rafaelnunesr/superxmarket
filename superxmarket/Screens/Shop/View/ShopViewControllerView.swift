@@ -228,6 +228,6 @@ extension ShopViewControllerView {
         productsTableView.topAnchor.constraint(equalTo: topHeader.bottomAnchor, constant: 40).isActive = true
         productsTableView.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 16).isActive = true
         productsTableView.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -16).isActive = true
-        productsTableView.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -16).isActive = true
+        productsTableView.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -100).isActive = true
     }
 }
