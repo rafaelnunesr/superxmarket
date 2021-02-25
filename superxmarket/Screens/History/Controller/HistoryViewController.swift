@@ -13,6 +13,7 @@ class HistoryViewController: UIViewController {
         super.viewDidLoad()
 
         self.view.backgroundColor = .red
+        self.navigationController?.navigationBar.isHidden = true
     }
 
 }

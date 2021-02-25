@@ -13,6 +13,7 @@ class ListViewController: UIViewController {
         super.viewDidLoad()
 
         self.view.backgroundColor = .gray
+        self.navigationController?.navigationBar.isHidden = true
     }
 
 }

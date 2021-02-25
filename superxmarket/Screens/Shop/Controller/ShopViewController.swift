@@ -14,6 +14,12 @@ class ShopViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view = shopView
+        
+        //self.tabBarController?.tabBar.barTintColor = .white
+        self.tabBarController?.tabBar.isTranslucent = false
+        self.navigationController?.navigationBar.isHidden = true
+        
+        //self.tabBarController?.tabBar.selectedItem?.badgeColor = Colors.lighterPurple
     }
     
     override var preferredStatusBarStyle: UIStatusBarStyle {

@@ -81,8 +81,9 @@ class LoginViewController: UIViewController {
     }
     
     @objc private func signinTapped() {
-        let vc = ShopViewController()
-        navigationController?.pushViewController(vc, animated: true)
+        let tabBar = MainTabBar()
+        tabBar.modalPresentationStyle = .fullScreen
+        self.present(tabBar, animated: true, completion: nil)
     }
     
     // MARK: SetupRecoverPasswordButton
