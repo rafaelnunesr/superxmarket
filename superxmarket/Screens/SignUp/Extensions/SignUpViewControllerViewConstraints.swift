@@ -14,7 +14,6 @@ extension SignUpViewControllerView {
         header.topAnchor.constraint(equalTo: self.topAnchor).isActive = true
         header.leadingAnchor.constraint(equalTo: self.leadingAnchor).isActive = true
         header.trailingAnchor.constraint(equalTo: self.trailingAnchor).isActive = true
-        header.heightAnchor.constraint(equalToConstant: 100).isActive = true
     }
     
     func setupProfilePhotoConstraints() {

@@ -64,6 +64,7 @@
 		1BEB944725E013AC00CFE57F /* ShopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BEB944625E013AC00CFE57F /* ShopViewController.swift */; };
 		1BEB944C25E013F200CFE57F /* ShopViewControllerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BEB944B25E013F200CFE57F /* ShopViewControllerView.swift */; };
 		1BF2422525E46F3800FD863A /* productData.json in Resources */ = {isa = PBXBuildFile; fileRef = 1BF2422425E46F3800FD863A /* productData.json */; };
+		1BFFD37F25E98CE50023587F /* Header.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BFFD37E25E98CE50023587F /* Header.swift */; };
 		2AE9C997EB552D7016F605EE /* Pods_superxmarket_superxmarketUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C5EAD36ADFCBE9565E65BC96 /* Pods_superxmarket_superxmarketUITests.framework */; };
 		C6A3BE86624FFC3E5AA81DA2 /* Pods_superxmarketTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D27741273341A6D32CCF32A /* Pods_superxmarketTests.framework */; };
 /* End PBXBuildFile section */
@@ -149,6 +150,7 @@
 		1BEB944625E013AC00CFE57F /* ShopViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopViewController.swift; sourceTree = "<group>"; };
 		1BEB944B25E013F200CFE57F /* ShopViewControllerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopViewControllerView.swift; sourceTree = "<group>"; };
 		1BF2422425E46F3800FD863A /* productData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = productData.json; sourceTree = "<group>"; };
+		1BFFD37E25E98CE50023587F /* Header.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Header.swift; sourceTree = "<group>"; };
 		28C10FB0A270062068D54CD4 /* Pods-superxmarketTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-superxmarketTests.release.xcconfig"; path = "Target Support Files/Pods-superxmarketTests/Pods-superxmarketTests.release.xcconfig"; sourceTree = "<group>"; };
 		2D27741273341A6D32CCF32A /* Pods_superxmarketTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_superxmarketTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5056BA4EBEA64224D0D9DBC7 /* Pods-superxmarket.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-superxmarket.release.xcconfig"; path = "Target Support Files/Pods-superxmarket/Pods-superxmarket.release.xcconfig"; sourceTree = "<group>"; };
@@ -319,6 +321,7 @@
 			isa = PBXGroup;
 			children = (
 				1B14690A25D7252D00DBBA80 /* CustomTextField.swift */,
+				1BFFD37E25E98CE50023587F /* Header.swift */,
 			);
 			path = "Custom Components";
 			sourceTree = "<group>";
@@ -912,6 +915,7 @@
 				1B0BA52D25E735F1001776C6 /* HistoryViewController.swift in Sources */,
 				1BB2A5F325DA668400985D02 /* SignupTextField.swift in Sources */,
 				1B14690B25D7252D00DBBA80 /* CustomTextField.swift in Sources */,
+				1BFFD37F25E98CE50023587F /* Header.swift in Sources */,
 				1BAF537925D80E8A003514AA /* UIFontExtension.swift in Sources */,
 				1B391E3F25C04D1E007AF561 /* UITextFieldExtension.swift in Sources */,
 				1B2CE62A25DF347D00512C5B /* SignUpViewControllerViewConstraints.swift in Sources */,

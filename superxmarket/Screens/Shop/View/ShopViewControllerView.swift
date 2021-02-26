@@ -9,7 +9,7 @@ import UIKit
 
 class ShopViewControllerView: UIView {
     
-    let topHeader: UIView = UIView()
+    let header: Header = Header()
     let welcomeUser: UILabel = UILabel()
     let totalAmount: UILabel = UILabel()
     let currency: UILabel = UILabel()
@@ -32,7 +32,6 @@ class ShopViewControllerView: UIView {
     }
     
     private func setup() {
-        self.setupHeader()
         self.setupWelcomeUser()
         self.setupTotalAmount()
         self.setupCurrency()
@@ -43,28 +42,28 @@ class ShopViewControllerView: UIView {
         self.setupProductsTableView()
     }
     
-    private func setupHeader() {
-        self.topHeader.backgroundColor = Colors.mainPurple
-    }
-    
     private func setupWelcomeUser() {
         self.welcomeUser.text = "Welcome, Rafael Nunes"
+        self.welcomeUser.font = UIFont.robotoMedium(size: 17)
         self.welcomeUser.textColor = .white
     }
     
     private func setupTotalAmount() {
-        self.totalAmount.text = "Total Amount"
+        self.totalAmount.text = "Total Amount:"
+        self.totalAmount.font = UIFont.robotoMedium(size: 17)
         self.totalAmount.textColor = .white
     }
     
     private func setupCurrency() {
         self.currency.text = "US$"
+        self.totalAmount.font = UIFont.robotoMedium(size: 17)
         self.currency.textColor = .white
     }
     
     private func setupTotalValue() {
         self.totalValue.text = "1,678.98"
         self.totalValue.textColor = .white
+        self.totalValue.font = UIFont.robotoBold(size: 30)
         self.totalValue.textAlignment = .right
     }
     
@@ -134,7 +133,7 @@ extension ShopViewControllerView: UITableViewDelegate {
 
 extension ShopViewControllerView: CodeViewProtocol {
     func buildViewHierarchy() {
-        self.addSubview(topHeader)
+        self.addSubview(header)
         self.addSubview(welcomeUser)
         self.addSubview(totalAmount)
         self.addSubview(currency)
@@ -161,11 +160,10 @@ extension ShopViewControllerView: CodeViewProtocol {
 extension ShopViewControllerView {
     
     private func setupTopHeaderConstraints() {
-        topHeader.translatesAutoresizingMaskIntoConstraints = false
-        topHeader.topAnchor.constraint(equalTo: self.topAnchor).isActive = true
-        topHeader.leadingAnchor.constraint(equalTo: self.leadingAnchor).isActive = true
-        topHeader.trailingAnchor.constraint(equalTo: self.trailingAnchor).isActive = true
-        topHeader.heightAnchor.constraint(equalToConstant: 170).isActive = true
+        header.translatesAutoresizingMaskIntoConstraints = false
+        header.topAnchor.constraint(equalTo: self.topAnchor).isActive = true
+        header.leadingAnchor.constraint(equalTo: self.leadingAnchor).isActive = true
+        header.trailingAnchor.constraint(equalTo: self.trailingAnchor).isActive = true
     }
     
     private func setupWelcomeUserConstraints() {
@@ -180,7 +178,7 @@ extension ShopViewControllerView {
         totalAmount.translatesAutoresizingMaskIntoConstraints = false
         totalAmount.topAnchor.constraint(equalTo: welcomeUser.bottomAnchor, constant: 30).isActive = true
         totalAmount.leadingAnchor.constraint(equalTo: welcomeUser.leadingAnchor).isActive = true
-        totalAmount.widthAnchor.constraint(equalToConstant: 200).isActive = true
+        totalAmount.widthAnchor.constraint(equalToConstant: 150).isActive = true
         totalAmount.heightAnchor.constraint(equalToConstant: 30).isActive = true
     }
     
@@ -193,7 +191,7 @@ extension ShopViewControllerView {
     
     private func setupTotalValueConstraints() {
         totalValue.translatesAutoresizingMaskIntoConstraints = false
-        totalValue.topAnchor.constraint(equalTo: self.safeAreaLayoutGuide.topAnchor, constant: 45).isActive = true
+        totalValue.topAnchor.constraint(equalTo: self.safeAreaLayoutGuide.topAnchor, constant: 40).isActive = true
         totalValue.widthAnchor.constraint(equalToConstant: 140).isActive = true
         totalValue.heightAnchor.constraint(equalToConstant: 70).isActive = true
         totalValue.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -16).isActive = true
@@ -201,7 +199,7 @@ extension ShopViewControllerView {
     
     private func setupSearchFieldConstraints() {
         searchField.translatesAutoresizingMaskIntoConstraints = false
-        searchField.centerYAnchor.constraint(equalTo: topHeader.bottomAnchor).isActive = true
+        searchField.centerYAnchor.constraint(equalTo: header.bottomAnchor).isActive = true
         searchField.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 26).isActive = true
         searchField.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -26).isActive = true
         searchField.heightAnchor.constraint(equalToConstant: 52).isActive = true
@@ -225,9 +223,9 @@ extension ShopViewControllerView {
     
     private func setupProductsTableViewConstraints() {
         productsTableView.translatesAutoresizingMaskIntoConstraints = false
-        productsTableView.topAnchor.constraint(equalTo: topHeader.bottomAnchor, constant: 40).isActive = true
+        productsTableView.topAnchor.constraint(equalTo: header.bottomAnchor, constant: 40).isActive = true
         productsTableView.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 16).isActive = true
         productsTableView.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -16).isActive = true
-        productsTableView.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -100).isActive = true
+        productsTableView.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -30).isActive = true
     }
 }
