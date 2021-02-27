@@ -117,19 +117,13 @@ class ShopViewControllerView: UIView {
     }
     
     private func setupProductsTableView() {
-        self.productsTableView.register(ProductTableViewCell.nib(), forCellReuseIdentifier: ProductTableViewCell.identifier)
-        
-        self.productsTableView.delegate = self
-        
         self.productsTableView.backgroundColor = .gray
+        self.productsTableView.showsHorizontalScrollIndicator = false
+        self.productsTableView.showsVerticalScrollIndicator = false
+        self.productsTableView.separatorStyle = .none
     }
         
 }
-
-
-extension ShopViewControllerView: UITableViewDelegate {
-}
-
 
 extension ShopViewControllerView: CodeViewProtocol {
     func buildViewHierarchy() {
