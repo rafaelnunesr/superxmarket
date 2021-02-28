@@ -27,9 +27,9 @@ final class LoginViewControllerView: UIView {
     // MARK: Init
     override init(frame: CGRect = .zero) {
         super.init(frame: frame)
-        self.setupGradientBackgroundColor()
         self.buildViewHierarchy()
         self.setupConstraints()
+        self.setupGradientBackgroundColor()
     }
     
     // MARK:
@@ -45,6 +45,9 @@ final class LoginViewControllerView: UIView {
         let endPoint: CGPoint = CGPoint(x: 0.1, y: 0.1)
         
         self.applyGradient(colors: gradientBackground, locations: location, startPoint: starPoint, endPoint: endPoint, indexLayer: 0)
+    
+        self.backgroundColor = Colors.mainPurple
+        
     }
         
 }

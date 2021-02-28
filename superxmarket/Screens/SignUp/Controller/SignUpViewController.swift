@@ -17,7 +17,6 @@ class SignUpViewController: UIViewController {
         let backItem = UIBarButtonItem()
         backItem.title = "Login"
         navigationController?.navigationBar.topItem?.backBarButtonItem = backItem
-        
         setup()
     }
     
