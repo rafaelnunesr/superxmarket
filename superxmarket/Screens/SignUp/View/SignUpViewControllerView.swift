@@ -9,7 +9,7 @@ import UIKit
 
 class SignUpViewControllerView: UIView {
     
-    let header: Header = Header()
+    let header: UIView = UIView()
     let profilePhoto: UIImageView = UIImageView()
     let userNameTextField: SignupTextField = SignupTextField()
     let emailTextField: SignupTextField = SignupTextField()
@@ -57,12 +57,17 @@ class SignUpViewControllerView: UIView {
     
     private func setupHeader() {
         setupHeaderConstraints()
+        self.header.backgroundColor = Colors.mainPurple
     }
     
     private func setupProfilePhoto() {
         setupProfilePhotoConstraints()
         self.profilePhoto.backgroundColor = Colors.lightPurple
-        self.profilePhoto.layer.cornerRadius = 75
+        
+        let screenSize: CGRect = UIScreen.main.bounds
+        let profilePhotoSize: CGFloat = screenSize.height * 0.15
+        
+        self.profilePhoto.layer.cornerRadius = profilePhotoSize / 2
         self.profilePhoto.image = UIImage(systemName: Icons.camera.rawValue)
         self.profilePhoto.tintColor = .white
         self.profilePhoto.contentMode = .scaleAspectFit

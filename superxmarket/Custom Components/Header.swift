@@ -30,6 +30,7 @@ class Header: UIView {
     
     private func setupConstraints() {
         self.translatesAutoresizingMaskIntoConstraints = false
-        self.heightAnchor.constraint(equalToConstant: 180).isActive = true
+        
+        self.heightAnchor.constraint(equalToConstant: 150).isActive = true
     }
 }

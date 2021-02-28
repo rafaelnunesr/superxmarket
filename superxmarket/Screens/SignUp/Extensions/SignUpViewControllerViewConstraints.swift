@@ -14,12 +14,20 @@ extension SignUpViewControllerView {
         header.topAnchor.constraint(equalTo: self.topAnchor).isActive = true
         header.leadingAnchor.constraint(equalTo: self.leadingAnchor).isActive = true
         header.trailingAnchor.constraint(equalTo: self.trailingAnchor).isActive = true
+        
+        let screenSize: CGRect = UIScreen.main.bounds
+        let screenHeight = screenSize.height * 0.1
+        
+        self.header.heightAnchor.constraint(equalToConstant: screenHeight).isActive = true
     }
     
     func setupProfilePhotoConstraints() {
-        let profilePhotoSize: CGFloat = 150
+        
+        let screenSize: CGRect = UIScreen.main.bounds
+        let profilePhotoSize: CGFloat = screenSize.height * 0.15
+        
         profilePhoto.translatesAutoresizingMaskIntoConstraints = false
-        profilePhoto.topAnchor.constraint(equalTo: header.bottomAnchor, constant: -75).isActive = true
+        profilePhoto.topAnchor.constraint(equalTo: header.bottomAnchor, constant: -profilePhotoSize / 2).isActive = true
         profilePhoto.centerXAnchor.constraint(equalTo: header.centerXAnchor).isActive = true
         profilePhoto.widthAnchor.constraint(equalToConstant: profilePhotoSize).isActive = true
         profilePhoto.heightAnchor.constraint(equalToConstant: profilePhotoSize).isActive = true
@@ -27,7 +35,7 @@ extension SignUpViewControllerView {
     
     func setupUserNameTextFieldCostraints() {
         userNameTextField.translatesAutoresizingMaskIntoConstraints = false
-        userNameTextField.topAnchor.constraint(equalTo: profilePhoto.bottomAnchor, constant: 44).isActive = true
+        userNameTextField.topAnchor.constraint(equalTo: profilePhoto.bottomAnchor, constant: 35).isActive = true
         userNameTextField.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 16).isActive = true
         userNameTextField.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -16).isActive = true
         userNameTextField.heightAnchor.constraint(equalToConstant: 52).isActive = true
