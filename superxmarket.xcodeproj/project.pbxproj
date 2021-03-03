@@ -30,6 +30,7 @@
 		1B2CE62A25DF347D00512C5B /* SignUpViewControllerViewConstraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B2CE62925DF347D00512C5B /* SignUpViewControllerViewConstraints.swift */; };
 		1B391E3725C0480D007AF561 /* CustomSignInButtonConstraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B391E3625C0480D007AF561 /* CustomSignInButtonConstraints.swift */; };
 		1B391E3F25C04D1E007AF561 /* UITextFieldExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B391E3E25C04D1E007AF561 /* UITextFieldExtension.swift */; };
+		1B3A16D525F042EB005802F8 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1B3A16D425F042EB005802F8 /* GoogleService-Info.plist */; };
 		1B42629225C05B4C007288FC /* LoginViewControllerUITextFieldDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B42629125C05B4C007288FC /* LoginViewControllerUITextFieldDelegate.swift */; };
 		1B4CB1C725DF39B100FB7C21 /* TermsCondtionsViewControllerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B4CB1C625DF39B100FB7C21 /* TermsCondtionsViewControllerView.swift */; };
 		1B839AE925BEFB5D006342F4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B839AE825BEFB5D006342F4 /* AppDelegate.swift */; };
@@ -111,6 +112,7 @@
 		1B2CE62925DF347D00512C5B /* SignUpViewControllerViewConstraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewControllerViewConstraints.swift; sourceTree = "<group>"; };
 		1B391E3625C0480D007AF561 /* CustomSignInButtonConstraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSignInButtonConstraints.swift; sourceTree = "<group>"; };
 		1B391E3E25C04D1E007AF561 /* UITextFieldExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITextFieldExtension.swift; sourceTree = "<group>"; };
+		1B3A16D425F042EB005802F8 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		1B42629125C05B4C007288FC /* LoginViewControllerUITextFieldDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewControllerUITextFieldDelegate.swift; sourceTree = "<group>"; };
 		1B4CB1C625DF39B100FB7C21 /* TermsCondtionsViewControllerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermsCondtionsViewControllerView.swift; sourceTree = "<group>"; };
 		1B839AE525BEFB5D006342F4 /* superxmarket.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = superxmarket.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -448,6 +450,7 @@
 				1B839AF625BEFB5E006342F4 /* Info.plist */,
 				1B14690F25D72E1000DBBA80 /* .gitignore */,
 				1B0BA53B25E73933001776C6 /* MainTabBar.swift */,
+				1B3A16D425F042EB005802F8 /* GoogleService-Info.plist */,
 			);
 			path = superxmarket;
 			sourceTree = "<group>";
@@ -771,6 +774,7 @@
 				1BA9435725EAC85900623EA0 /* ProductsTableViewCell.xib in Resources */,
 				1BF2422525E46F3800FD863A /* productData.json in Resources */,
 				1B839AF025BEFB5D006342F4 /* Main.storyboard in Resources */,
+				1B3A16D525F042EB005802F8 /* GoogleService-Info.plist in Resources */,
 				1B97079D25D8154C001291B2 /* Roboto-Light.ttf in Resources */,
 				1B0BA54825E73D47001776C6 /* History.storyboard in Resources */,
 			);

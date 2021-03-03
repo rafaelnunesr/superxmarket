@@ -9,6 +9,9 @@ target 'superxmarket' do
   pod 'EmailValidator'
   pod 'LoremIpsum', '~> 1.0'
   pod 'IQKeyboardManagerSwift', '~> 6.5'
+  pod 'Alamofire', '~> 5.2'
+  pod 'Firebase'
+  pod 'FirebaseAuth'
 
   target 'superxmarketTests' do
     inherit! :search_paths

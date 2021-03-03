@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import FirebaseAuth
 
 class LoginViewController: UIViewController {
     
@@ -63,12 +64,16 @@ class LoginViewController: UIViewController {
         self.loginView.emailTextField.setup(icon: Icons.person, placeholder: "Email")
         self.loginView.emailTextField.keyboardType = .emailAddress
         self.loginView.emailTextField.autocapitalizationType = .none
+        self.loginView.emailTextField.autocorrectionType = .no
+        self.loginView.emailTextField.returnKeyType = .continue
     }
     
     // MARK: SetupPasswordTextField
     private func setupPasswordTextField() {
         self.loginView.passwordTextField.setup(icon: Icons.lock, placeholder: "Password")
         self.loginView.passwordTextField.isSecureTextEntry = true
+        self.loginView.passwordTextField.autocorrectionType = .no
+        self.loginView.passwordTextField.returnKeyType = .done
     }
     
     // MARK: SetupContinueButton
@@ -81,9 +86,35 @@ class LoginViewController: UIViewController {
     }
     
     @objc private func signinTapped() {
-        let tabBar = MainTabBar()
-        tabBar.modalPresentationStyle = .fullScreen
-        self.present(tabBar, animated: true, completion: nil)
+        
+        self.loginView.emailTextField.resignFirstResponder()
+        self.loginView.passwordTextField.resignFirstResponder()
+        
+        guard let email = self.loginView.emailTextField.text, let password = self.loginView.passwordTextField.text, !email.isEmpty, !password.isEmpty, password.count >= 6 else {
+            alertUserError()
+            return
+        }
+        
+        FirebaseAuth.Auth.auth().signIn(withEmail: email, password: password) { [weak self] authResult, error in
+            
+            guard let strongSelf = self else { return }
+            guard let result = authResult, error == nil else {
+                print("Failed to log in user with email \(email)")
+                return
+            }
+            
+            let user = result.user
+            print("Logged User: \(user)")
+            
+            let tabBar = MainTabBar()
+            tabBar.modalPresentationStyle = .fullScreen
+            strongSelf.present(tabBar, animated: true, completion: nil)
+            
+        }
+    }
+    
+    private func alertUserError() {
+        print("error logging in user")
     }
     
     // MARK: SetupRecoverPasswordButton
