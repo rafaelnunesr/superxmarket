@@ -11,6 +11,8 @@ import FirebaseAuth
 class LoginViewController: UIViewController {
     
     let loginView = LoginViewControllerView()
+    var userEmail: String?
+    var userPassword: String?
     
     // MARK: ViewDidLoad
     override func viewDidLoad() {
@@ -87,19 +89,34 @@ class LoginViewController: UIViewController {
     
     @objc private func signinTapped() {
         
-        self.loginView.emailTextField.resignFirstResponder()
-        self.loginView.passwordTextField.resignFirstResponder()
+        self.resignTextFields()
         
         guard let email = self.loginView.emailTextField.text, let password = self.loginView.passwordTextField.text, !email.isEmpty, !password.isEmpty, password.count >= 6 else {
             alertUserError()
             return
         }
         
-        FirebaseAuth.Auth.auth().signIn(withEmail: email, password: password) { [weak self] authResult, error in
+        self.userEmail = email
+        self.userPassword = password
+        
+        loginWithFirebase()
+    }
+    
+    private func resignTextFields() {
+        self.loginView.emailTextField.resignFirstResponder()
+        self.loginView.passwordTextField.resignFirstResponder()
+    }
+    
+    private func loginWithFirebase() {
+        
+        guard let userEmail = self.userEmail, let userPassword = self.userPassword else { return }
+        
+        FirebaseAuth.Auth.auth().signIn(withEmail: userEmail, password: userPassword) { [weak self] authResult, error in
             
             guard let strongSelf = self else { return }
             guard let result = authResult, error == nil else {
-                print("Failed to log in user with email \(email)")
+                print("Failed to log in user with email \(userEmail)")
+                self!.alertUserError()
                 return
             }
             
@@ -114,7 +131,6 @@ class LoginViewController: UIViewController {
     }
     
     private func alertUserError() {
-        print("error logging in user")
     }
     
     // MARK: SetupRecoverPasswordButton
