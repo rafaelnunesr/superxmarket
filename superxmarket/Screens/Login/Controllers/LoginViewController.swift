@@ -131,6 +131,9 @@ class LoginViewController: UIViewController {
     }
     
     private func alertUserError() {
+        let alert = UIAlertController(title: "Error", message: "Error to log in", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Dismiss", style: .cancel, handler: nil))
+        present(alert, animated: true, completion: nil)
     }
     
     // MARK: SetupRecoverPasswordButton
