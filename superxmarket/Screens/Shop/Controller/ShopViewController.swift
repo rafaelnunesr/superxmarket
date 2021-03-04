@@ -32,6 +32,12 @@ class ShopViewController: UIViewController {
         return .lightContent
     }
     
+    func callLogingVC() {
+        let vc = LoginViewController()
+        vc.modalPresentationStyle = .fullScreen
+        present(vc, animated: false, completion: nil)
+    }
+    
 }
 
 extension ShopViewController: UITableViewDelegate {

@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import FirebaseAuth
 
 class ShopViewControllerView: UIView {
     
@@ -14,6 +15,7 @@ class ShopViewControllerView: UIView {
     let totalAmount: UILabel = UILabel()
     let currency: UILabel = UILabel()
     let totalValue: UILabel = UILabel()
+    let logoutButton: UIButton = UIButton()
     let searchField: UITextField = UITextField()
     let cameraIcon: UIButton = UIButton()
     let searchIcon: UIButton = UIButton()
@@ -36,6 +38,7 @@ class ShopViewControllerView: UIView {
         self.setupTotalAmount()
         self.setupCurrency()
         self.setupTotalValue()
+        self.setupLogoutButton()
         self.setupSearchField()
         self.setupCameraIcon()
         self.setupSearchIcon()
@@ -65,6 +68,27 @@ class ShopViewControllerView: UIView {
         self.totalValue.textColor = .white
         self.totalValue.font = UIFont.robotoBold(size: 30)
         self.totalValue.textAlignment = .right
+    }
+    
+    private func setupLogoutButton() {
+        self.logoutButton.backgroundImage(for: .normal)
+        let btnImage = UIImage(systemName: Icons.exit.rawValue)
+        self.logoutButton.setImage(btnImage, for: .normal)
+        self.logoutButton.tintColor = .white
+        
+        self.logoutButton.addTarget(self, action: #selector(logoutTapped), for: .touchUpInside)
+    }
+    
+    @objc private func logoutTapped() {
+        
+        do {
+            try FirebaseAuth.Auth.auth().signOut()
+            
+            self.callLogingVC()
+            
+        }catch {
+        
+        }
     }
     
     private func setupSearchField() {
@@ -132,6 +156,7 @@ extension ShopViewControllerView: CodeViewProtocol {
         self.addSubview(totalAmount)
         self.addSubview(currency)
         self.addSubview(totalValue)
+        self.addSubview(logoutButton)
         self.addSubview(searchField)
         self.addSubview(cameraIcon)
         self.addSubview(searchIcon)
@@ -144,6 +169,7 @@ extension ShopViewControllerView: CodeViewProtocol {
         setupTotalAmountConstraints()
         setupCurrencyConstraints()
         setupTotalValueConstraints()
+        setupLogoutButtonConstraints()
         setupSearchFieldConstraints()
         setupCameraIconConstraints()
         setupSearchIconConstraints()
@@ -189,6 +215,15 @@ extension ShopViewControllerView {
         totalValue.widthAnchor.constraint(equalToConstant: 140).isActive = true
         totalValue.heightAnchor.constraint(equalToConstant: 70).isActive = true
         totalValue.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -16).isActive = true
+    }
+    
+    private func setupLogoutButtonConstraints() {
+        let iconSize: CGFloat = 20
+        logoutButton.translatesAutoresizingMaskIntoConstraints = false
+        logoutButton.centerYAnchor.constraint(equalTo: welcomeUser.centerYAnchor).isActive = true
+        logoutButton.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -16).isActive = true
+        logoutButton.widthAnchor.constraint(equalToConstant: iconSize).isActive = true
+        logoutButton.heightAnchor.constraint(equalToConstant: iconSize).isActive = true
     }
     
     private func setupSearchFieldConstraints() {

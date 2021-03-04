@@ -17,6 +17,7 @@ enum Icons: String {
     case house = "house.fill"
     case camera = "camera.fill"
     case magnifyingglass = "magnifyingglass"
+    case exit = "arrow.forward.square.fill"
 }
 
 class CustomTextField: UITextField {
