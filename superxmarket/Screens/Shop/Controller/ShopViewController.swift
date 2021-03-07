@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import FirebaseAuth
 
 class ShopViewController: UIViewController {
 
@@ -26,16 +27,26 @@ class ShopViewController: UIViewController {
         
         self.shopView.productsTableView.delegate = self
         self.shopView.productsTableView.dataSource = self
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(callLogingVC), name: Notification.Name("callLoginVC"), object: nil)
     }
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
     }
     
-    func callLogingVC() {
-        let vc = LoginViewController()
-        vc.modalPresentationStyle = .fullScreen
-        present(vc, animated: false, completion: nil)
+    @objc func callLogingVC() {
+        
+        do {
+            try FirebaseAuth.Auth.auth().signOut()
+            
+            let vc = LoginViewController()
+            vc.modalPresentationStyle = .fullScreen
+            present(vc, animated: true, completion: nil)
+            
+        } catch {
+            
+        }
     }
     
 }

@@ -8,7 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Item-->
+        <!--Shop View Controller-->
         <scene sceneID="7C9-Zs-ETU">
             <objects>
                 <viewController id="V5X-gh-gZU" customClass="ShopViewController" customModule="superxmarket" customModuleProvider="target" sceneMemberID="viewController">
@@ -18,11 +18,11 @@
                         <viewLayoutGuide key="safeArea" id="9kF-MK-8AW"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="a0Y-zN-V4J"/>
+                    <navigationItem key="navigationItem" id="HjG-hf-so1"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Vv1-Zf-N1Z" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="605.79710144927537" y="76.339285714285708"/>
+            <point key="canvasLocation" x="1515.9420289855075" y="76.339285714285708"/>
         </scene>
     </scenes>
     <resources>

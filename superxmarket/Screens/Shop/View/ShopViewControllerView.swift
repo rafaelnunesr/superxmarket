@@ -6,7 +6,6 @@
 //
 
 import UIKit
-import FirebaseAuth
 
 class ShopViewControllerView: UIView {
     
@@ -80,15 +79,7 @@ class ShopViewControllerView: UIView {
     }
     
     @objc private func logoutTapped() {
-        
-        do {
-            try FirebaseAuth.Auth.auth().signOut()
-            
-            self.callLogingVC()
-            
-        }catch {
-        
-        }
+        NotificationCenter.default.post(name: Notification.Name("callLoginVC"), object: nil)
     }
     
     private func setupSearchField() {
